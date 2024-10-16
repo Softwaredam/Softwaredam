@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Softwaredam</title>
+    <style>
+      body {
+        font-family: "Outfit", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh);
+        margin: 0;
+        background-color: #ebd8d8;
+
+        /* justify-content: flex-start; */
+        flex-direction: column;
+        margin: 0;
+      }
+      .logo {
+        width: 200px;
+        position: relative;
+        left: 0;
+        animation: rotateLogo 1s linear forwards;
+      }
+      .title {
+        position: relative;
+        opacity: 0;
+        animation: fadeInLogoText 0.8s forwards;
+        animation-delay: 1s;
+      }
+      .mail-logo {
+        position: relative;
+        width: 20px;
+        height: 20px;
+      }
+
+      .fadeAfterLogo {
+        opacity: 0;
+        animation: fadeInLogoText 1s forwards;
+        animation-delay: 1s;
+      }
+
+      @keyframes rotateLogo {
+        from {
+          transform: translateX(calc(-50vw)) rotate(0deg);
+        }
+        to {
+          /* 100px is the half of the logo width 200px. */
+          transform: translateX(100px) rotate(360deg);
+        }
+      }
+      @keyframes fadeInLogoText {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="logo.svg" class="logo" alt="Softwaredam B.V." />
+      <div class="fadeAfterLogo">
+        <h1 class="title">Welcome to Softwaredam.</h1>
+      </div>
+    </div>
+    <div class="fadeAfterLogo">
+      <!-- https://www.instagram.com/software_dam/ -->
+      <p>
+        More to come. Email us in the meanwhile.&nbsp;
+
+        <a href="mailto:info@softwaredam.com">
+          <img src="mail.svg" alt="Email" class="mail-logo" />
+        </a>
+      </p>
+    </div>
+  </body>
+</html>
