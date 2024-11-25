@@ -23,3 +23,11 @@ describe('HomeComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+(() => {
+  const $cookiesBanner = document.querySelector(".cookies-eu-banner");
+  const $cookiesBannerButton = $cookiesBanner.querySelector("button");
+
+  $cookiesBannerButton.addEventListener("click", () => {
+    $cookiesBanner.remove();
+  });
+})();
