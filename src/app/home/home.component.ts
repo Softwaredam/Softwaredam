@@ -21,3 +21,5 @@ export class HomeComponent implements OnInit {
     this.projectService.browseProject(this.projects[project]);
   }
 }
+
+
