@@ -28,7 +28,7 @@ a {
     vertical-align: top;
     margin-left: 200px;
     margin-bottom: 120px;
-    width: 300px;
+    width: 250px;
 }
 
 #main-page-text {
@@ -168,8 +168,8 @@ button {
 }
 
 .contact {
-  padding-bottom: 50px;
   position: fixed;
+  padding-bottom: 100px;
   bottom: 0;
   width: 100%;
   z-index: 10;
@@ -182,7 +182,7 @@ button {
 
 
 .linked-icons {
-  width: 20px;
+  width: 30px;
   background-color: #EBD8D8;
   border-radius: 15%;
   color: rgba(0, 0, 0, 0);
