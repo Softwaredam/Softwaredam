@@ -1,222 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XHLN582JS9"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-XHLN582JS9");
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg+xml" href="logo.svg" />
-  <link rel="icon" sizes="192x192" href="logo.svg" />
-  <link rel="apple-touch-icon" href="logo.png" />
-  <meta name="apple-mobile-web-app-title" content="Softwaredam" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
-  <title>Softwaredam</title>
-
-  <meta property="og:title" content="Softwaredam" />
-  <meta property="og:description" content="People First." />
-  <meta property="og:image" content="https://softwaredam.com/logo.png" />
-  <meta property="og:url" content="https://softwaredam.com" />
-
-  <style>
-    body {
-      font-family: "Outfit", sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: calc(100vh);
-      margin: 0;
-      background-color: #ebd8d8;
-      flex-direction: column;
-      margin: 0;
-    }
-
-    .title {
-      position: relative;
-      opacity: 0;
-      animation: fadeInLogoText 0.8s forwards;
-      animation-delay: 1s;
-    }
-
-    .logo {
-      width: 200px;
-      /* position: relative; */
-      left: 0;
-      animation: rotateLogo 1s linear forwards;
-    }
-
-    .linked-icons {
-      width: 20px;
-      height: 20px;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .fadeAfterLogo {
-      opacity: 0;
-      animation: fadeInLogoText 1s forwards;
-      animation-delay: 1s;
-    }
-
-    .footer {
-      position: absolute;
-      bottom: 0;
-      padding: 10px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    .center {
-      display: flex;
-      align-content: center;
-    }
-
-    @keyframes rotateLogo {
-      from {
-        transform: translateX(calc(-50vw)) rotate(0deg);
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XHLN582JS9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
+      gtag("js", new Date());
 
-      to {
-        /* 100px is the half of the logo width 200px. */
-        transform: translateX(30px) rotate(360deg);
-      }
-    }
+      gtag("config", "G-XHLN582JS9");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.4" />
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <link rel="icon" sizes="192x192" href="logo.svg" />
+    <link rel="apple-touch-icon" href="logo.png" />
+    <meta name="apple-mobile-web-app-title" content="Softwaredam" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    @keyframes fadeInLogoText {
-      to {
-        opacity: 1;
-      }
-    }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Softwaredam</title>
 
-    .cookies {
-      background: #151724;
-      color: #fff;
-      font-size: 12px;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      z-index: 10;
-      display: flex;
-      justify-content: center;
-      justify-self: auto;
-      align-items: center;
-      opacity: 1;
-      transition: opacity 0.5s ease-in-out;
-    }
+    <meta property="og:title" content="Softwaredam" />
+    <meta name="author" content="Softwaredam, info@softwaredam.com" />
+    <meta
+      name="description"
+      content="At Softwaredam we enable enterprises and businesses to migrate, modernize, and transform their software systems and IT infrastructure. We are specialized in near zero-downtime migrations, public and private clouds, Platform Architecture, Cloud Native solutions, CICD Architecture, and DevOps transformations."
+    />
+    <meta
+      property="og:description"
+      content="At Softwaredam we enable enterprises and businesses to migrate, modernize, and transform their software systems and IT infrastructure. We are specialized in near zero-downtime migrations, public and private clouds, Platform Architecture, Cloud Native solutions, CICD Architecture, and DevOps transformations."
+    />
+    <meta property="og:image" content="https://softwaredam.com/logo.png" />
+    <meta property="og:url" content="https://softwaredam.com" />
 
-    .cookies p {
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-      font-size: 12px;
-      margin: 0;
-      padding-right: 16px;
-    }
+  <body>
+    <div class="container">
+      <div class="section">
+        <div class="slide" id="slide1">
+          <div>
+            <img
+              id="main-page-logo"
+              src="santa-orang.svg"
+              alt="Softwaredam Logo Santa Orangutan"
+            />
+            <img
+              id="main-page-text"
+              src="main-page-text.svg"
+              alt="Softwaredam Main Page Text"
+            />
+          </div>
+        </div>
+        <div class="contact">
+          <p>
+            <a href="mailto:info@softwaredam.com">
+              <img src="mail.svg" alt="Email" class="linked-icons" />
+            </a>
+            &nbsp;
+            <a href="https://instagram.com/software_dam" target="_blank">
+              <img
+                src="instagram.svg"
+                alt="Softwaredam on Instagram"
+                class="linked-icons"
+              />
+            </a>
+            &nbsp;
+            <a
+              href="https://www.linkedin.com/company/softwaredam"
+              target="_blank"
+            >
+              <img
+                src="linkedin.svg"
+                alt="Softwaredam on LinkedIn"
+                class="linked-icons"
+              />
+            </a>
+          </p>
+        </div>
+      </div>
+      <div id="snowflakes-container">
+        <style>
+          .snowflake {
+            position: absolute;
+            top: -10px;
+            font-size: 24px;
+            color: white;
+            pointer-events: none;
+            animation: fall linear infinite;
+          }
+          @keyframes fall {
+            to {
+              transform: translateY(80vh);
+            }
+          }
+        </style>
+        <script>
+          const createSnowflake = () => {
+            const snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflake.textContent = "❄️";
+            snowflake.style.left = `${Math.random() * 100}vw`;
+            snowflake.style.fontSize = `${Math.random() * 10 + 15}px`;
+            snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            document
+              .getElementById("snowflakes-container")
+              .appendChild(snowflake);
 
-    .cookies button {
-      text-decoration: none;
-      background: #ebd8d9;
-      color: black;
-      border: 1px solid #000;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 0;
-      padding: 5px 10px;
-      font-size: 13px;
-      font-weight: 700;
-      transition: background 0.07s, color 0.07s, border-color 0.07s;
-    }
+            setTimeout(() => {
+              snowflake.remove();
+            }, parseFloat(snowflake.style.animationDuration) * 900);
+          };
 
-    .cookies button:hover {
-      background-color: #ff5800;
-    }
+          setInterval(createSnowflake, 80); // Increased frequency of snowflake creation
+        </script>
+      </div>
 
-    @keyframes fadeInCookies {
-      from {
-        opacity: 0;
-      }
+      <div id="cookies" class="cookies fade-in">
+        <p>This website is making use of analytical cookies</p>
+        <button onclick="cookiesAccept()">Accept</button>
+      </div>
+      <div class="footer">
+        &copy; <span id="year"></span> Softwaredam B.V. All rights reserved.
+      </div>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
 
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeOutCookies {
-      from {
-        opacity: 1;
-      }
-
-      to {
-        opacity: 0;
-      }
-    }
-
-
-    .fade-in {
-      animation: fadeInCookies 0.5s ease-in-out;
-    }
-
-    .fade-out {
-      animation: fadeOutCookies 0.5s ease-in-out;
-      opacity: 0;
-      pointer-events: none;
-    }
-  </style>
-</head>
-
-<body>
-  <div>
-    <img src="logo.svg" class="logo" alt="Softwaredam B.V." />
-    <div class="fadeAfterLogo">
-      <h1 class="title">SOFTWAREDAM</h1>
+        function cookiesAccept() {
+          const cookieBanner = document.getElementById("cookies");
+          cookieBanner.classList.remove("fade-in");
+          cookieBanner.classList.add("fade-out");
+          setTimeout(() => {
+            cookieBanner.style.display = "none";
+          }, 500);
+        }
+      </script>
     </div>
-  </div>
-
-  <div class="fadeAfterLogo">
-    <p>
-      We are working on our new website. &nbsp;
-      <a href="mailto:info@softwaredam.com">
-        <img src="mail.svg" alt="Email" class="linked-icons" />
-      </a>
-      &nbsp;
-      <a href="https://instagram.com/software_dam" target="_blank">
-        <img src="instagram.svg" alt="Softwaredam on Instagram" class="linked-icons" />
-      </a>
-      &nbsp;
-      <a href="https://www.linkedin.com/company/softwaredam" target="_blank">
-        <img src="linkedin.svg" alt="Softwaredam on LinkedIn" class="linked-icons" />
-      </a>
-    </p>
-  </div>
-  <div id="cookies" class="cookies fade-in">
-    <p>This website is making use of analytical cookies</p> <button onclick="cookiesAccept()">Accept</button>
-  </div>
-  <div class="footer">
-    &copy; <span id="year"></span> Softwaredam B.V. All rights reserved.
-  </div>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    function cookiesAccept() {
-      const cookieBanner = document.getElementById('cookies');
-      cookieBanner.classList.remove('fade-in');
-      cookieBanner.classList.add('fade-out');
-      setTimeout(() => {
-        cookieBanner.style.display = 'none';
-      }, 500);
-    }
-  </script>
-</body>
-
+  </body>
 </html>
