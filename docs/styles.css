@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow: hidden; /* Prevent default scrolling */
+}
+
+a {
+  text-decoration: none; /* Removes underline */
+  color: inherit;
+}
+
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center; /* Center items vertically */
+    scroll-snap-align: start;
+    position: relative;
+}
+
+#main-page-logo {
+    vertical-align: top;
+    margin-left: 200px;
+    margin-bottom: 120px;
+    width: 300px;
+}
+
+#main-page-text {
+    margin-left: 100px;
+    margin-top: 500x;
+    vertical-align: bottom;
+}
+
+.slide {
+    min-width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center;
+    font-size: 2em;
+    scroll-snap-align: start;
+    transition: background 0.5s ease-in-out;
+}
+
+#slide1   {
+    background-image: url('main-background.svg');
+}
+
+button {
+    border-width: 0;
+    background-color: rgba(250, 250, 250, 0.0); /* 50% opacity */
+    color: #404040; /* Ensure the text color is fully opaque */
+    margin: 0 0px;
+    padding: 5px 5px;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.dots {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: rgb(244, 243, 243);
+}
+
+.cookies {
+  color: #fff;
+  font-size: 12px;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  justify-self: auto;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.cookies p {
+  font-size: 12px;
+  margin: 0;
+  padding-right: 16px;
+}
+
+.cookies button {
+  text-decoration: none;
+  background: #ebd8d9;
+  color: black;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.07s, color 0.07s, border-color 0.07s;
+}
+
+.cookies button:hover {
+  background-color: #ff5800;
+}
+
+@keyframes fadeInCookies {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutCookies {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeInCookies 0.5s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOutCookies 0.5s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.center {
+  display: flex;
+  align-content: center;
+}
+
+.contact {
+  padding-bottom: 50px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  justify-self: auto;
+  align-items: center;
+  opacity: 0.8;
+}
+
+
+.linked-icons {
+  width: 20px;
+  background-color: #EBD8D8;
+  border-radius: 15%;
+  color: rgba(0, 0, 0, 0);
+}
