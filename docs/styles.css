@@ -47,6 +47,9 @@ h4 {
   padding-bottom: 02em;
 }
 
+.bolder {
+  font-weight: bolder;
+}
 
 .container {
     height: 100vh;
