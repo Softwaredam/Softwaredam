@@ -52,8 +52,8 @@
           <div>
             <img
               id="main-page-logo"
-              src="santa-orang.svg"
-              alt="Softwaredam Logo Santa Orangutan"
+              src="logo.svg"
+              alt="Softwaredam B.V. Logo"
             />
             <img
               id="main-page-text"
@@ -106,23 +106,25 @@
           }
         </style>
         <script>
-          const createSnowflake = () => {
-            const snowflake = document.createElement("div");
-            snowflake.classList.add("snowflake");
-            snowflake.textContent = "❄️";
-            snowflake.style.left = `${Math.random() * 100}vw`;
-            snowflake.style.fontSize = `${Math.random() * 10 + 15}px`;
-            snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`;
-            document
-              .getElementById("snowflakes-container")
-              .appendChild(snowflake);
+          if (false) {
+            const createSnowflake = () => {
+              const snowflake = document.createElement("div");
+              snowflake.classList.add("snowflake");
+              snowflake.textContent = "❄️";
+              snowflake.style.left = `${Math.random() * 100}vw`;
+              snowflake.style.fontSize = `${Math.random() * 10 + 15}px`;
+              snowflake.style.animationDuration = `${Math.random() * 5 + 5}s`;
+              document
+                .getElementById("snowflakes-container")
+                .appendChild(snowflake);
 
-            setTimeout(() => {
-              snowflake.remove();
-            }, parseFloat(snowflake.style.animationDuration) * 900);
-          };
+              setTimeout(() => {
+                snowflake.remove();
+              }, parseFloat(snowflake.style.animationDuration) * 900);
+            };
 
-          setInterval(createSnowflake, 80); // Increased frequency of snowflake creation
+            setInterval(createSnowflake, 80); // Increased frequency of snowflake creation
+          }
         </script>
       </div>
 
