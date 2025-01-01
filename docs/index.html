@@ -16,17 +16,30 @@
       gtag("config", "G-XHLN582JS9");
     </script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.4" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0 " /> -->
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
     <link rel="icon" sizes="192x192" href="logo.svg" />
     <link rel="apple-touch-icon" href="logo.png" />
     <meta name="apple-mobile-web-app-title" content="Softwaredam" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
+    <!-- MaterializeCSS -->
+    <!-- Compiled and minified CSS -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles.css" />
+
     <title>Softwaredam</title>
 
     <meta property="og:title" content="Softwaredam" />
@@ -41,25 +54,44 @@
     />
     <meta property="og:image" content="https://softwaredam.com/logo.png" />
     <meta property="og:url" content="https://softwaredam.com" />
-
-    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <div class="container">
-      <div class="section">
+    <div class="">
+      <div class="">
         <div class="slide" id="slide1">
-          <div>
-            <img
-              id="main-page-logo"
-              src="logo.svg"
-              alt="Softwaredam B.V. Logo"
-            />
-            <img
-              id="main-page-text"
-              src="main-page-text.svg"
-              alt="Softwaredam Main Page Text"
-            />
+          <!-- <div class="row">
+            <div class="col s2 offset-s2 m6">
+              <img src="logo.svg" alt="Softwaredam B.V. Logo" />
+            </div>
+
+            <div class="col s6">
+              
+            </div>
+          </div> -->
+          <div class="container valign-wrapper">
+            <div class="row">
+              <div class="col s2 m2 l3">
+                <img class="logo" src="logo.svg" alt="Softwaredam B.V. Logo" />
+              </div>
+              <div class="col s7 m12 l8">
+                <h1>WELCOME TO</h1>
+                <h1 class="softwaredam-orange">SOFTWAREDAM</h1>
+
+                <h4>
+                  We enable enterprises and businesses to
+                  <span class="softwaredam-orange bolder">migrate</span>,
+                  <span class="softwaredam-orange bolder">modernize</span> and
+                  <span class="softwaredam-orange bolder">transform</span> their
+                  software systems and IT infrastructure. 
+                </h4>
+                <p class="">
+                  We are specialized in near zero-downtime migrations, public
+                  and private clouds, Platform Architecture, Cloud Native
+                  Solutions, CICD architecture, and  DevOps transformation.  
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="contact">
@@ -129,7 +161,7 @@
       </div>
 
       <div id="cookies" class="cookies fade-in">
-        <p>This website is making use of analytical cookies</p>
+        <p>We are making use of analytical cookies</p>
         <button onclick="cookiesAccept()">Accept</button>
       </div>
       <div class="footer">

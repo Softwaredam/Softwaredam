@@ -1,13 +1,52 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    overflow: hidden; /* Prevent default scrolling */
+    font-family: "Outfit", serif;
+    font-size: 1.5em;
+    /* font-optical-sizing: auto; */
+    /* font-style: normal; */
+    /* margin: 0; */
+    
+    /* Prevent default scrolling */
+    overflow: hidden; 
 }
 
 a {
   text-decoration: none; /* Removes underline */
   color: inherit;
 }
+
+p {
+  color: white;
+  font-weight: 100;
+  
+  /* font-style: normal; */
+  /* font-size: medium; */
+}
+
+h1 {
+  color: #FFFFFF;
+  letter-spacing: calc(1em * 0.15);
+  font-weight: 900;
+  margin: 0;
+}
+
+h4 {
+  color: #FFFFFF;
+  letter-spacing: calc(16px * 0.15);
+  font-weight: 100;
+  font-style: normal;
+  /* font-size: larger; */
+}
+
+.softwaredam-orange {
+  color: #FF4A00;
+}
+
+.logo {
+  width: 9em;
+  padding-right: 02em;
+  padding-bottom: 02em;
+}
+
 
 .container {
     height: 100vh;
@@ -31,21 +70,23 @@ a {
     width: 250px;
 }
 
-#main-page-text {
+/* #main-page-text {
     margin-left: 100px;
     margin-top: 500x;
     vertical-align: bottom;
-}
+} */
+
+
 
 .slide {
     min-width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center;
-    font-size: 2em;
-    scroll-snap-align: start;
-    transition: background 0.5s ease-in-out;
+    /* display: flex; */
+    /* justify-content: center;  */
+    /* align-items: center; */
+    /* font-size: 2em; */
+    /* scroll-snap-align: start; */
+    /* transition: background 0.5s ease-in-out; */
 }
 
 #slide1   {
@@ -100,7 +141,7 @@ button {
   transition: opacity 0.5s ease-in-out;
 }
 
-.cookies p {
+.cookies p1 {
   font-size: 12px;
   margin: 0;
   padding-right: 16px;
@@ -157,19 +198,19 @@ button {
 .footer {
   position: absolute;
   bottom: 0;
-  padding: 10px;
+  padding: 15px;
   font-size: 14px;
   color: #666;
 }
 
-.center {
+/* .center {
   display: flex;
   align-content: center;
-}
+} */
 
 .contact {
   position: fixed;
-  padding-bottom: 100px;
+  padding-bottom: 2em;
   bottom: 0;
   width: 100%;
   z-index: 10;
@@ -177,12 +218,12 @@ button {
   justify-content: center;
   justify-self: auto;
   align-items: center;
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 
 .linked-icons {
-  width: 30px;
+  width: 2em;
   background-color: #EBD8D8;
   border-radius: 15%;
   color: rgba(0, 0, 0, 0);
