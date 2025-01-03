@@ -56,6 +56,13 @@ h4 {
     scroll-behavior: smooth;
 }
 
+.slide-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 .section {
     height: 100vh;
     display: flex;
@@ -78,6 +85,23 @@ h4 {
 } */
 
 
+
+.slide-section {
+  height: 100vh;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.horizontal-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
 
 .slide {
     min-width: 100vw;
