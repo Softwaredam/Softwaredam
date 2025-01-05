@@ -17,10 +17,23 @@ a {
 p {
   color: white;
   font-weight: 100;
-  /* font-size: 1em; */
 }
 
 h1 {
+  color: #FFFFFF;
+  letter-spacing: calc(1em * 0.15);
+  font-weight: 900;
+  margin: 0;
+}
+
+h2 {
+  color: #FFFFFF;
+  letter-spacing: calc(1em * 0.15);
+  font-weight: 700;
+  margin: 0;
+}
+
+h3 {
   color: #FFFFFF;
   letter-spacing: calc(1em * 0.15);
   font-weight: 900;
@@ -31,18 +44,54 @@ h4 {
   color: #FFFFFF;
   letter-spacing: calc(16px * 0.15);
   font-weight: 100;
-  font-style: normal;
-  /* font-size: larger; */
+}
+
+h5 {
+  color: #FFFFFF;
+  letter-spacing: calc(16px * 0.15);
+  font-weight: 200;
+}
+
+h6 {
+  color: #FFFFFF;
+  letter-spacing: calc(16px * 0.15);
+  font-weight: 900;
 }
 
 .softwaredam-orange {
   color: #FF4A00;
 }
 
+.primary-logo-text {
+  padding-top: 0.35em;
+}
+
 .logo {
   width: 9em;
   padding-right: 02em;
-  padding-bottom: 02em;
+}
+
+.small-logo {
+  width: 2.5em;
+}
+
+.small-logo-text {
+  /* padding-top = the half of small-logo.width */
+  padding-top: 1.25em;
+  margin: 0;
+}
+
+.menu {
+  font-size: 0.5em;
+  letter-spacing: calc(16px * 0.25);
+  margin: 2em;
+  /* margin-top: 2em; */
+}
+
+.menu-item {
+  text-decoration: underline; /* Removes underline */
+  color: inherit;
+  white-space: pre ;
 }
 
 .bolder {
@@ -51,10 +100,18 @@ h4 {
 
 .container {
     height: 100vh;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
     scroll-behavior: smooth;
+    width: 95%
 }
 
+/* On mobile when in landscape mode. */
+@media (orientation: landscape) and (max-width: 1000px){
+  .container {
+    /* Remove the fixed height so the whole page can be seen */
+    height: auto;
+  }
+}
 .slide-container {
   height: 100vh;
   overflow-y: scroll;
@@ -77,20 +134,16 @@ h4 {
     width: 250px;
 }
 
-/* #main-page-text {
-    margin-left: 100px;
-    margin-top: 500x;
-    vertical-align: bottom;
-} */
-
-
-
 .slide-section {
   height: 100vh;
   display: flex;
   align-items: center; /* Center items vertically */
   scroll-snap-align: start;
   position: relative;
+}
+
+.section2   {
+  background: #faf5f5; 
 }
 
 .horizontal-container {
@@ -150,44 +203,37 @@ button {
 }
 
 .cookies {
-  color: #fff;
   font-size: 12px;
-  padding: 10px;
   position: fixed;
   bottom: 0;
-  width: 100%;
-  z-index: 10;
   display: flex;
+  transition: opacity 0.5s ease-in-out;
+  background-color: black;
+  opacity: 0.5;
+  border-radius: 5px;
   justify-content: center;
   justify-self: auto;
+  padding-right: 1em;
+  padding-left: 1em;
   align-items: center;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  left: 40%;
 }
 
 .cookies p1 {
   font-size: 12px;
-  margin: 0;
-  padding-right: 16px;
 }
 
 .cookies button {
   text-decoration: none;
   background: #ebd8d9;
   color: black;
-  border: 1px solid #000;
   border-radius: 5px;
   cursor: pointer;
   margin: 0;
-  padding: 5px 10px;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 10px;
   transition: background 0.07s, color 0.07s, border-color 0.07s;
 }
 
-.cookies button:hover {
-  background-color: #ff5800;
-}
 
 @keyframes fadeInCookies {
   from {
@@ -220,20 +266,15 @@ button {
 }
 
 .footer {
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   padding: 15px;
   font-size: 14px;
   color: #666;
 }
 
-/* .center {
-  display: flex;
-  align-content: center;
-} */
-
 .contact {
-  position: fixed;
+  /* position: fixed; */
   padding-bottom: 2em;
   bottom: 0;
   width: 100%;
@@ -266,6 +307,7 @@ button {
   /* z-index: 10; */
   /* user-select: none; */
 }
+
 .arrow-left {
   background-image: url('images/arrow-left.svg');
   position: sticky;
@@ -276,6 +318,8 @@ button {
   left: 150px;
 }
 
+
+
 .arrow-right {
   background-image: url('images/arrow-right.svg');
   position: sticky;
@@ -285,12 +329,7 @@ button {
   user-select: none;
   right: 150px;
 }
-#slide2a   {
-  background: #faf5f5; 
-}
-#slide2b   {
-  background: #faf5f5; 
-}
+
 #consultancy-devops{
   padding-top: 2vh;
   padding-bottom: 2vh;
