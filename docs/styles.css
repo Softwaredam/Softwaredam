@@ -318,8 +318,6 @@ button {
   left: 150px;
 }
 
-
-
 .arrow-right {
   background-image: url('images/arrow-right.svg');
   position: sticky;
@@ -330,20 +328,7 @@ button {
   right: 150px;
 }
 
-#consultancy-devops{
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-  padding-right: 2vw;
-  padding-left: 2vw;
+.pictogram {
   background: #F6ECEC;
-  width: 30vw;
-  height: 20hw;
-  border-radius: 8px;
-}
-#consultancy-bold{
-  margin: 0px;
-  font-weight: bold;
-}
-#consultancy-text{
-  margin: 0px;
+  margin: 1em;
 }
