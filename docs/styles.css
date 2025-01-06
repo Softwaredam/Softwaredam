@@ -166,8 +166,15 @@ h6 {
     /* transition: background 0.5s ease-in-out; */
 }
 
-#slide1   {
+#slide1 {
     background-image: url('images/main-background.png');
+}
+
+#slide4 {
+  background-image: url('images/softwaredam-orangutan.png');
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: left; /* Centers the image */
+
 }
 
 button {
