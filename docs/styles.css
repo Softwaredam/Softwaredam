@@ -62,6 +62,10 @@ h6 {
   color: #FF4A00;
 }
 
+.softwaredam-pink {
+  color: #faf5f5;
+}
+
 .primary-logo-text {
   padding-top: 0.35em;
 }
@@ -143,7 +147,14 @@ h6 {
 }
 
 .section2   {
-  background: #faf5f5; 
+  background: #faf5f5;
+}
+
+.section4   {
+  background-image: url('images/softwaredam-orangutan.png');
+  background-size: cover; 
+  background-position: left; 
+  background-repeat: no-repeat;
 }
 
 .horizontal-container {
@@ -158,23 +169,11 @@ h6 {
 .slide {
     min-width: 100vw;
     height: 100vh;
-    /* display: flex; */
-    /* justify-content: center;  */
-    /* align-items: center; */
-    /* font-size: 2em; */
     scroll-snap-align: start;
-    /* transition: background 0.5s ease-in-out; */
 }
 
 #slide1 {
     background-image: url('images/main-background.png');
-}
-
-#slide4 {
-  background-image: url('images/softwaredam-orangutan.png');
-  background-size: cover; /* Ensures the image covers the entire screen */
-  background-position: left; /* Centers the image */
-
 }
 
 button {
@@ -273,15 +272,10 @@ button {
 }
 
 .footer {
-  /* position: absolute; */
-  bottom: 0;
-  padding: 15px;
   font-size: 14px;
-  color: #666;
 }
 
 .contact {
-  /* position: fixed; */
   padding-bottom: 2em;
   bottom: 0;
   width: 100%;
@@ -293,13 +287,34 @@ button {
   opacity: 0.5;
 }
 
-
-.linked-icons {
-  width: 2em;
-  background-color: #EBD8D8;
-  border-radius: 15%;
-  color: rgba(0, 0, 0, 0);
+.contact-button {
+  display: inline-block;
+  opacity: 0.8;
+  padding: 10px 20px;
+  padding-bottom: 0px 0px;
+  font-size: 16px;
+  color: white;
+  /* text-align: center; */
+  /* text-decoration: none; */
+  border-radius: 40px;
+  background: linear-gradient(45deg, #FF6600, #FF4A00, #FF2200);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
+.contact-button:hover {
+  background: linear-gradient(45deg, #FF2200, #FF4A00, #FF6600);
+}
+
+
+.media-icon {
+  width: 40px;
+  padding: 0px;
+  margin: 5px
+}
+
+
+
 .carousel-item:not(.active) {
   visibility: hidden;
 }
@@ -307,12 +322,6 @@ button {
 .arrow {
   position: sticky;
   top: 50%;
-  /* transform: translateY(-50%); */
-  /* font-size: 2em; */
-  /* color: red; */
-  /* cursor: pointer; */
-  /* z-index: 10; */
-  /* user-select: none; */
 }
 
 .arrow-left {
