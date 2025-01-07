@@ -346,5 +346,11 @@ button {
 
 .pictogram {
   background: #F6ECEC;
-  margin: 1em;
+  margin-top: 1em;
+  margin-right: 1em;
+  border-radius: 5px;
+}
+.image-top{
+padding-top: 0.5em;
+
 }
