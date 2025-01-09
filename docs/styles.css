@@ -149,7 +149,9 @@ h6 {
 .section2   {
   background: #faf5f5;
 }
-
+.section3{
+  background: #F5F9FA;
+}
 .section4   {
   background-image: url('images/softwaredam-orangutan.png');
   background-size: cover; 
@@ -314,7 +316,6 @@ button {
 }
 
 
-
 .carousel-item:not(.active) {
   visibility: hidden;
 }
@@ -352,5 +353,9 @@ button {
 }
 .image-top{
 padding-top: 0.5em;
-
+}
+.about-us-text{
+  background: #E6EFF1;
+  padding: 1em;
+  border-radius: 5px;
 }
