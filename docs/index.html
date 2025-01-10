@@ -106,7 +106,6 @@
           class="arrow-left"
           onclick="scrollHorizontal('left', 'horizontal-container1')"
         />
-
         <!-------------------------------------First slide of the second section----------------------------------------->
         <div class="slide" id="migrations">
           <div class="container valign-wrapper">
@@ -343,35 +342,49 @@
               <div class="col s6">
                 <h2 class="black-text">ABOUT US</h2>
               </div>
-              <div class="col s6 offset-s3">
+
+              <!-- profile pictures -->
+              <div class="profile-container col s6 offset-s3">
                 <img
-                  class="circle responsive-img z-depth-5 active-profile"
                   src="images/yosuf.jpg"
-                  alt="Yosuf Haydary"
+                  alt="Profile 1"
+                  class="profile-pic"
+                  onclick="showInfo('profile1')"
                 />
                 <img
                   src="images/stephan.png"
-                  alt="Stephan"
-                  class="circle responsive-img"
+                  alt="Profile 2"
+                  class="profile-pic"
+                  onclick="showInfo('profile2')"
                 />
                 <img
                   src="images/Ellipse91.png"
-                  alt="Softwaredam Orangutan"
-                  class="circle responsive-img"
+                  alt="Profile 3"
+                  class="profile-pic"
+                  onclick="showInfo('profile3')"
                 />
               </div>
-              <div class="col s12 l8 offset-l2">
-                <div class="about-us-text">
-                  <h5 class="bold-text black-text">Yosuf Haydary</h5>
-                  <p class="black-text">
-                    Yosuf Haydary is the founder of Softwaredam and a Senior
-                    Consultant. He has extensive experience in mission-critical
-                    software and systems engineering and architecture. Yosuf
-                    loves to learn, code, coach, and write. He holds a Master of
-                    Science (MSc.) degree in Software Engineering from the
-                    University of Amsterdam.
-                  </p>
-                </div>
+
+              <!-- profile info -->
+              <div id="profile-info" class="col s6 offset-s3">
+                <p id="profile1" class="info black-text">
+                  Yosuf Haydary is the founder of Softwaredam and a Senior
+                  Consultant. He has extensive experience in mission-critical
+                  software and systems engineering and architecture. Yosuf loves
+                  to learn, code, coach, and write. He holds a Master of Science
+                  (MSc.) degree in Software Engineering from the University of
+                  Amsterdam.
+                </p>
+                <p id="profile2" class="info black-text">
+                  I am a student whose profession it is to come up with the
+                  right solution for your problems. Not one that works, but one
+                  that works for u. I combine innovation and creativity with
+                  problem solving to get to the best solution possible. Even if
+                  the problem I encounter does not have an existing solution!
+                </p>
+                <p id="profile3" class="info black-text">
+                  Profile 3: Information about the third person.
+                </p>
               </div>
             </div>
           </div>

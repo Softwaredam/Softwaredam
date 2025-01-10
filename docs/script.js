@@ -94,5 +94,14 @@ function updateDots() {
     });
 }
 
+function showInfo(profileId) {
+    // Hide all profile info
+    const infos = document.querySelectorAll('.info');
+    infos.forEach(info => info.style.display = 'none');
+
+    // Show the selected profile info
+    document.getElementById(profileId).style.display = 'block';
+}
+
 updateDots(); // Initialize dots on page load
 

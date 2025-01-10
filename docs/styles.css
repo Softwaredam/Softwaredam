@@ -1,12 +1,12 @@
 body {
-    font-family: "Outfit", serif;
-    font-size: 1.5em;
-    /* font-optical-sizing: auto; */
-    /* font-style: normal; */
-    /* margin: 0; */
-    
-    /* Prevent default scrolling */
-    overflow: hidden; 
+  font-family: "Outfit", serif;
+  font-size: 1.5em;
+  /* font-optical-sizing: auto; */
+  /* font-style: normal; */
+  /* margin: 0; */
+
+  /* Prevent default scrolling */
+  overflow: hidden;
 }
 
 a {
@@ -20,46 +20,46 @@ p {
 }
 
 h1 {
-  color: #FFFFFF;
+  color: #ffffff;
   letter-spacing: calc(1em * 0.15);
   font-weight: 900;
   margin: 0;
 }
 
 h2 {
-  color: #FFFFFF;
+  color: #ffffff;
   letter-spacing: calc(1em * 0.15);
   font-weight: 700;
   margin: 0;
 }
 
 h3 {
-  color: #FFFFFF;
+  color: #ffffff;
   letter-spacing: calc(1em * 0.15);
   font-weight: 900;
   margin: 0;
 }
 
 h4 {
-  color: #FFFFFF;
+  color: #ffffff;
   letter-spacing: calc(16px * 0.15);
   font-weight: 100;
 }
 
 h5 {
-  color: #FFFFFF;
+  color: #ffffff;
   letter-spacing: calc(16px * 0.15);
   font-weight: 200;
 }
 
 h6 {
-  color: #FFFFFF;
+  color: #ffffff;
   letter-spacing: calc(16px * 0.15);
   font-weight: 900;
 }
 
 .softwaredam-orange {
-  color: #FF4A00;
+  color: #ff4a00;
 }
 
 .softwaredam-pink {
@@ -95,7 +95,7 @@ h6 {
 .menu-item {
   text-decoration: underline; /* Removes underline */
   color: inherit;
-  white-space: pre ;
+  white-space: pre;
 }
 
 .bolder {
@@ -103,14 +103,14 @@ h6 {
 }
 
 .container {
-    height: 100vh;
-    /* scroll-snap-type: y mandatory; */
-    scroll-behavior: smooth;
-    width: 95%
+  height: 100vh;
+  /* scroll-snap-type: y mandatory; */
+  scroll-behavior: smooth;
+  width: 95%;
 }
 
 /* On mobile when in landscape mode. */
-@media (orientation: landscape) and (max-width: 1000px){
+@media (orientation: landscape) and (max-width: 1000px) {
   .container {
     /* Remove the fixed height so the whole page can be seen */
     height: auto;
@@ -124,18 +124,18 @@ h6 {
 }
 
 .section {
-    height: 100vh;
-    display: flex;
-    align-items: center; /* Center items vertically */
-    scroll-snap-align: start;
-    position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center; /* Center items vertically */
+  scroll-snap-align: start;
+  position: relative;
 }
 
 #main-page-logo {
-    vertical-align: top;
-    margin-left: 200px;
-    margin-bottom: 120px;
-    width: 250px;
+  vertical-align: top;
+  margin-left: 200px;
+  margin-bottom: 120px;
+  width: 250px;
 }
 
 .slide-section {
@@ -146,16 +146,16 @@ h6 {
   position: relative;
 }
 
-.section2   {
+.section2 {
   background: #faf5f5;
 }
-.section3{
-  background: #F5F9FA;
+.section3 {
+  background: #f5f9fa;
 }
-.section4   {
-  background-image: url('images/softwaredam-orangutan.png');
-  background-size: cover; 
-  background-position: left; 
+.section4 {
+  background-image: url("images/softwaredam-orangutan.png");
+  background-size: cover;
+  background-position: left;
   background-repeat: no-repeat;
 }
 
@@ -169,45 +169,45 @@ h6 {
 }
 
 .slide {
-    min-width: 100vw;
-    height: 100vh;
-    scroll-snap-align: start;
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
 }
 
 #slide1 {
-    background-image: url('images/main-background.png');
+  background-image: url("images/main-background.png");
 }
 
 button {
-    border-width: 0;
-    background-color: rgba(250, 250, 250, 0.0); /* 50% opacity */
-    color: #404040; /* Ensure the text color is fully opaque */
-    margin: 0 0px;
-    padding: 5px 5px;
-    font-size: 0.8em;
-    cursor: pointer;
+  border-width: 0;
+  background-color: rgba(250, 250, 250, 0); /* 50% opacity */
+  color: #404040; /* Ensure the text color is fully opaque */
+  margin: 0 0px;
+  padding: 5px 5px;
+  font-size: 0.8em;
+  cursor: pointer;
 }
 
 .dots {
-    position: fixed;
-    right: 30px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: gray;
-    cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  cursor: pointer;
 }
 
 .dot.active {
-    background-color: rgb(244, 243, 243);
+  background-color: rgb(244, 243, 243);
 }
 
 .cookies {
@@ -241,7 +241,6 @@ button {
   font-size: 10px;
   transition: background 0.07s, color 0.07s, border-color 0.07s;
 }
-
 
 @keyframes fadeInCookies {
   from {
@@ -299,23 +298,20 @@ button {
   /* text-align: center; */
   /* text-decoration: none; */
   border-radius: 40px;
-  background: linear-gradient(45deg, #FF6600, #FF4A00, #FF2200);
+  background: linear-gradient(45deg, #ff6600, #ff4a00, #ff2200);
   border: none;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 .contact-button:hover {
-  background: linear-gradient(45deg, #FF2200, #FF4A00, #FF6600);
+  background: linear-gradient(45deg, #ff2200, #ff4a00, #ff6600);
 }
-
 
 .media-icon {
   width: 40px;
   padding: 0px;
-  margin: 5px
+  margin: 5px;
 }
-
-
 
 .carousel-item:not(.active) {
   visibility: hidden;
@@ -327,7 +323,7 @@ button {
 }
 
 .arrow-left {
-  background-image: url('images/arrow-left.svg');
+  background-image: url("images/arrow-left.svg");
   position: sticky;
   top: 55%;
   cursor: pointer;
@@ -337,7 +333,7 @@ button {
 }
 
 .arrow-right {
-  background-image: url('images/arrow-right.svg');
+  background-image: url("images/arrow-right.svg");
   position: sticky;
   top: 55%;
   cursor: pointer;
@@ -347,21 +343,45 @@ button {
 }
 
 .pictogram {
-  background: #F6ECEC;
+  background: #f6ecec;
   margin-top: 1em;
   margin-right: 1em;
   border-radius: 5px;
 }
-.image-top{
-padding-top: 0.5em;
-
+.image-top {
+  padding-top: 0.5em;
 }
-.about-us-text{
-  background: #E6EFF1;
+.about-us-text {
+  background: #e6eff1;
   padding: 1em;
   border-radius: 5px;
 }
 
-.active-profile{
+.active-profile {
   width: 6em;
+}
+.no-padding {
+  padding: 0;
+}
+.profile-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#profile-info {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #e6eff1;
+}
+
+.info {
+  display: none;
 }
