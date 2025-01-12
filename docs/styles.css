@@ -135,7 +135,7 @@ header {
   height: 100vh;
   /* scroll-snap-type: y mandatory; */
   scroll-behavior: smooth;
-  width: 95%;
+  width: 90%;
 }
 
 /* On mobile when in landscape mode. */
