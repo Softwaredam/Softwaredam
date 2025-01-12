@@ -93,8 +93,15 @@ header {
   width: 15em;
   padding-right: 02em;
   padding-left: 5em;
+  padding-right: 1em;
   padding-top: 10em;
   transition: all 0.3s ease;
+}
+.logo-text {
+  font-size: 0em;
+  margin-top: 2em;
+  padding-left: 0px;
+  margin-left: 0em;
 }
 
 .small-logo {
