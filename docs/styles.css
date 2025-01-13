@@ -67,7 +67,7 @@ h6 {
 }
 
 .softwaredam-light-blue {
-  background-color: #E6EFF1;
+  background-color: #e6eff1;
 }
 
 .new-part {
@@ -190,7 +190,6 @@ header {
   background-position: left;
   background-repeat: no-repeat;
 }
-
 
 .horizontal-container {
   display: flex;
@@ -350,31 +349,6 @@ button {
   visibility: hidden;
 }
 
-.arrow {
-  position: sticky;
-  top: 50%;
-}
-
-.arrow-left {
-  background-image: url("images/arrow-left.svg");
-  position: sticky;
-  top: 55%;
-  cursor: pointer;
-  z-index: 10;
-  user-select: none;
-  left: 150px;
-}
-
-.arrow-right {
-  background-image: url("images/arrow-right.svg");
-  position: sticky;
-  top: 55%;
-  cursor: pointer;
-  z-index: 10;
-  user-select: none;
-  right: 150px;
-}
-
 .pictogram {
   background: #f6ecec;
   margin-top: 10px;
@@ -400,7 +374,6 @@ button {
   border-radius: 5px;
 }
 
-
 .active-profile {
   width: 6em;
 }
@@ -422,7 +395,7 @@ button {
   cursor: pointer;
 }
 .profile-text {
-  background-color: #E6EFF1;
+  background-color: #e6eff1;
 }
 
 .tabs .tab {
@@ -437,10 +410,11 @@ button {
 .active a {
   width: 2em;
 }
-.tabs .tab a:focus, .tabs .tab a:focus.active {
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
   background-color: transparent;
 }
-.tabs  {
+.tabs {
   height: auto;
   background-color: transparent;
 }
