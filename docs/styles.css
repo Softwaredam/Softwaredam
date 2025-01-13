@@ -114,19 +114,6 @@ header {
   margin: 0;
 }
 
-.menu {
-  font-size: 0.5em;
-  letter-spacing: calc(16px * 0.25);
-  margin: 2em;
-  /* margin-top: 2em; */
-}
-
-.menu-item {
-  text-decoration: underline; /* Removes underline */
-  color: inherit;
-  white-space: pre;
-}
-
 .bolder {
   font-weight: bolder;
 }
@@ -208,16 +195,6 @@ header {
 
 #slide1 {
   background-image: url("images/main-background.png");
-}
-
-button {
-  border-width: 0;
-  background-color: rgba(250, 250, 250, 0); /* 50% opacity */
-  color: #404040; /* Ensure the text color is fully opaque */
-  margin: 0 0px;
-  padding: 5px 5px;
-  font-size: 0.8em;
-  cursor: pointer;
 }
 
 .dots {
