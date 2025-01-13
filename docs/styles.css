@@ -1,16 +1,10 @@
 body {
   font-family: "Outfit", serif;
   font-size: 1.5em;
-  /* font-optical-sizing: auto; */
-  /* font-style: normal; */
-  /* margin: 0; */
-
-  /* Prevent default scrolling */
-  /* overflow: hidden; */
 }
 
 a {
-  text-decoration: none; /* Removes underline */
+  text-decoration: none;
   color: inherit;
 }
 
@@ -84,7 +78,6 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  /* background-color: white; */
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -109,7 +102,6 @@ header {
 }
 
 .small-logo-text {
-  /* padding-top = the half of small-logo.width */
   padding-top: 1.25em;
   margin: 0;
 }
@@ -120,7 +112,6 @@ header {
 
 .container {
   height: 100vh;
-  /* scroll-snap-type: y mandatory; */
   scroll-behavior: smooth;
   width: 90%;
 }
@@ -128,7 +119,7 @@ header {
 .section {
   height: 100vh;
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center;
   scroll-snap-align: start;
   position: relative;
 }
@@ -143,7 +134,7 @@ header {
 .slide-section {
   height: 100vh;
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center;
   scroll-snap-align: start;
   position: relative;
 }
