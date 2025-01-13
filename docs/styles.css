@@ -197,28 +197,6 @@ header {
   background-image: url("images/main-background.png");
 }
 
-.dots {
-  position: fixed;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: gray;
-  cursor: pointer;
-}
-
-.dot.active {
-  background-color: rgb(244, 243, 243);
-}
-
 .cookies {
   font-size: 12px;
   position: fixed;
