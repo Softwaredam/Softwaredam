@@ -107,13 +107,6 @@ header {
   width: 90%;
 }
 
-#main-page-logo {
-  vertical-align: top;
-  margin-left: 200px;
-  margin-bottom: 120px;
-  width: 250px;
-}
-
 #last-slide {
   height: 100vh;
   width: 100vw;
@@ -121,19 +114,6 @@ header {
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
-}
-
-.horizontal-container {
-  display: flex;
-
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-.slide {
-  min-width: 100vw;
-  height: 100vh;
-  scroll-snap-align: start;
 }
 
 #slide1 {
@@ -258,23 +238,6 @@ header {
 
 .image-top {
   padding-top: 0.5em;
-}
-
-.about-us-text {
-  background: #e6eff1;
-  padding: 1em;
-  border-radius: 5px;
-}
-
-.active-profile {
-  width: 6em;
-}
-.no-padding {
-  padding: 0;
-}
-.profile-container {
-  justify-content: space-around;
-  margin-top: 20px;
 }
 
 .profile-pic {
