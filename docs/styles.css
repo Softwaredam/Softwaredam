@@ -97,15 +97,6 @@ header {
   margin-left: 0em;
 }
 
-.small-logo {
-  width: 2.5em;
-}
-
-.small-logo-text {
-  padding-top: 1.25em;
-  margin: 0;
-}
-
 .bolder {
   font-weight: bolder;
 }
@@ -116,34 +107,11 @@ header {
   width: 90%;
 }
 
-.section {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  scroll-snap-align: start;
-  position: relative;
-}
-
 #main-page-logo {
   vertical-align: top;
   margin-left: 200px;
   margin-bottom: 120px;
   width: 250px;
-}
-
-.slide-section {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  scroll-snap-align: start;
-  position: relative;
-}
-
-.section2 {
-  background: #faf5f5;
-}
-.section3 {
-  background: #f5f9fa;
 }
 
 #last-slide {
