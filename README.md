@@ -1,18 +1,5 @@
 # Softwaredam
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
-It uses [Materialize](https://materializecss.com).
+At [Softwaredam](https://www.softwaredam.com) we enable enterprises and businesses to migrate, modernize, and transform their software systems and IT infrastructure. We are specialized in near zero-downtime migrations, public and private clouds, Platform Architecture, Cloud Native solutions, CICD Architecture, and DevOps transformations.
 
-## DevOps
-
-### Develop and test local
-- `npm start` or `ng serve`
-- browse `http://localhost:4200`
-
-### Package
-- Run `release.sh` to build the project.
-  - The build artifacts will be stored in the `docs/` directory, becuase github pages serves from this folder.
-  - See also project settings Github > this project > Settings > Options > GitHub Pages
-
-- Git commit/push (PR/MR)
-- Visual tests on the deployed website.
+Please contact [Softwaredam](https://www.softwaredam.com) for any inquiry.

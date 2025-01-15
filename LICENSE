@@ -1,21 +1,20 @@
-MIT License
+Proprietary License Agreement
 
-Copyright (c) 2018 Softwaredam
+This software and its associated source code are the exclusive property of Softwaredam and/or third-party providers of any included libraries. Unauthorized copying, distribution, modification, or use of this software, or artifacts, in whole or in part, is strictly prohibited without prior written consent from Softwaredam.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+By using this software, you agree to the following terms:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Ownership: All rights, title, and interest in and to the software, including any modifications or enhancements, are and shall remain the exclusive property of Softwaredam and/or third-party providers.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Restrictions: You may not:
+
+- Copy, modify, or distribute the software or any portion thereof.
+- Reverse engineer, decompile, or disassemble the software.
+- Use the software for any unlawful purpose.
+- Third-Party Libraries: This software may include libraries provided by third parties. The use of these libraries is subject to the terms and conditions set forth by the respective third-party providers.
+
+Termination: This license is effective until terminated. Your rights under this license will terminate automatically without notice if you fail to comply with any term(s) of this license.
+
+Disclaimer of Warranty: This software is provided "as is" without warranty of any kind, either express or implied, including but not limited to the implied warranties of merchantability and fitness for a particular purpose.
+
+Limitation of Liability: In no event shall Softwaredam or its third-party providers be liable for any damages whatsoever arising out of the use of or inability to use this software.
