@@ -90,6 +90,7 @@ header {
   padding-top: 10em;
   transition: all 0.3s ease;
 }
+
 .logo-text {
   font-size: 0em;
   margin-top: 2em;
@@ -211,6 +212,7 @@ header {
   cursor: pointer;
   transition: background 0.3s ease;
 }
+
 .contact-button:hover {
   background: linear-gradient(45deg, #ff2200, #ff4a00, #ff6600);
 }
@@ -227,6 +229,7 @@ header {
   margin-right: 10px;
   border-radius: 5px;
 }
+
 .pictogram h6 {
   font-weight: 500;
   letter-spacing: normal;
@@ -238,6 +241,7 @@ header {
 
 .image-top {
   padding-top: 0.5em;
+  height: 70px;
 }
 
 .profile-pic {
@@ -246,6 +250,7 @@ header {
   margin: 0px;
   cursor: pointer;
 }
+
 .profile-text {
   background-color: #e6eff1;
 }
@@ -253,19 +258,24 @@ header {
 .tabs .tab {
   height: auto;
 }
+
 .tabs .indicator {
   background-color: transparent;
 }
+
 .tab {
   display: grid;
 }
+
 .active a {
   width: 2em;
 }
+
 .tabs .tab a:focus,
 .tabs .tab a:focus.active {
   background-color: transparent;
 }
+
 .tabs {
   height: auto;
   background-color: transparent;
