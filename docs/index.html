@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags begin -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Migreer en train slim! Wij bieden naadloze IT-migraties (Cloud, On-premises, Applicatie & Data) én gespecialiseerde trainingen in Cloud Observability, Kubernetes, CICD en Docker. Optimaliseer uw IT met Softwaredam."
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Softwaredam" />
+    <meta name="author" content="Softwaredam, info@softwaredam.com" />
+    <meta property="og:title" content="Softwaredam" />
+    <meta
+      property="og:description"
+      content="Migreer en train slim! Wij bieden naadloze IT-migraties (Cloud, On-premises, Applicatie & Data) én gespecialiseerde trainingen in Cloud Observability, Kubernetes, CI/CD en Docker. Optimaliseer uw IT met Softwaredam."
+    />
+    <meta
+      property="og:image"
+      content="https://softwaredam.com/images/logo.png"
+    />
+    <meta property="og:url" content="https://softwaredam.com" />
+    <!-- Meta tags end -->
     <title>Softwaredam - Bouwen. Migreren. Transformeren.</title>
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+    <link rel="icon" sizes="192x192" href="images/logo.svg" />
+    <link rel="apple-touch-icon" href="images/logo.png" />
     <!-- Materialize CSS CDN -->
     <link
       rel="stylesheet"
@@ -733,17 +755,38 @@
         position: relative;
         z-index: 1;
       }
+
+      @media (max-width: 992px) {
+        /* Materialize 'l' breakpoint (grotere tablets/kleine desktops) */
+        .map-container {
+          padding-bottom: 40% !important;
+        }
+      }
+      @media (max-width: 768px) {
+        /* Materialize 'm' breakpoint (tablets) */
+        .map-container {
+          padding-bottom: 60% !important;
+        }
+      }
+      @media (max-width: 600px) {
+        /* Materialize 's' breakpoint (mobiel) */
+        .map-container {
+          padding-bottom: 50% !important;
+        }
+      }
+
       /* Style for responsive iframe container */
       .map-container {
         position: relative;
-        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        padding-bottom: 20%;
         height: 0;
         overflow: hidden;
         max-width: 100%;
-        border-radius: 8px;
+        /* border-radius: 8px; */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         margin-top: 20px;
       }
+
       .map-container iframe {
         position: absolute;
         top: 0;
@@ -784,7 +827,7 @@
         background-image: url("https://www.softwaredam.com/images/main-background.png"); /* Achtergrondafbeelding */
         background-size: cover;
         background-position: center;
-        padding: 30px 0;
+        padding-top: 30px;
         color: #888;
         text-align: center;
       }
@@ -857,7 +900,13 @@
             <h1 class="hero-title white-text uppercase">
               VERSNEL UW DIGITALE EVOLUTIE
             </h1>
-            <p class="hero-subtitle white-text">BUILD.MIGRATE.TRANSFORM</p>
+            <p class="hero-subtitle white-text bold">
+              Build<span class="orange-text">.</span> Migrate<span
+                class="orange-text"
+                >.</span
+              >
+              Transform<span class="orange-text">.</span>
+            </p>
 
             <!-- Geconsolideerde trechterknoppen -->
             <div class="hero-buttons">
@@ -881,26 +930,26 @@
             <div class="hero-visual-items">
               <a href="#services" class="hero-visual-link">
                 <div class="hero-visual-item">
-                  <i class="material-icons">cloud_queue</i>
-                  <h3>Cloud Platforms</h3>
-                </div>
-              </a>
-              <a href="#services" class="hero-visual-link">
-                <div class="hero-visual-item">
                   <i class="material-icons">swap_horiz</i>
                   <h3>Migraties</h3>
                 </div>
               </a>
               <a href="#services" class="hero-visual-link">
                 <div class="hero-visual-item">
-                  <i class="material-icons">build</i>
-                  <h3>DevOps Transformaties</h3>
+                  <i class="material-icons">school</i>
+                  <h3>Trainingen</h3>
                 </div>
               </a>
               <a href="#services" class="hero-visual-link">
                 <div class="hero-visual-item">
-                  <i class="material-icons">school</i>
-                  <h3>Trainingen</h3>
+                  <i class="material-icons">cloud_queue</i>
+                  <h3>Cloud Platforms</h3>
+                </div>
+              </a>
+              <a href="#services" class="hero-visual-link">
+                <div class="hero-visual-item">
+                  <i class="material-icons">build</i>
+                  <h3>DevOps Transformaties</h3>
                 </div>
               </a>
             </div>
@@ -967,18 +1016,20 @@
     <section class="cta-section bg-darker">
       <div class="container">
         <h2 class="center-align white-text">
-          Klaar om te <span class="orange-text">Innoveren?</span>
+          Klaar om te <span class="orange-text">meer over te weten?</span>
         </h2>
         <p class="flow-text white-text">
-          Of u nu uw infrastructuur wilt moderniseren, uw processen wilt
-          stroomlijnen of simpelweg deskundige begeleiding nodig heeft,
-          Softwaredam is er om u te helpen. Laten we uw unieke uitdagingen
-          bespreken.
+          Of u nu hulp nodig heeft bij
+          <span class="orange-text">Migratie's</span>,
+          <span class="orange-text">Cloud Platforms</span> of
+          <span class="orange-text">DevOps Transformaties</span>. Wij staan
+          klaar om u op deze vlakken met onze expertise te ondersteunen. Laten
+          we samen de beste weg vooruit vinden.
         </p>
         <a
           href="mailto:info@softwaredam.com"
           class="waves-effect waves-light custom-btn primary-btn"
-          >Krijg een gratis consult</a
+          >Gratis uur consult</a
         >
       </div>
     </section>
@@ -987,20 +1038,20 @@
     <section id="careers" class="cta-section" style="background-color: #05040a">
       <div class="container">
         <h2 class="center-align white-text">
-          Geef de Toekomst Vorm met <span class="orange-text">Ons</span>
+          Groei Met <span class="orange-text">Ons</span> Mee!
         </h2>
         <p class="flow-text white-text">
-          Gepassioneerd door Cloud, DevOps en baanbrekende transformaties? We
-          zijn altijd op zoek naar getalenteerde individuen om ons groeiende
-          team te versterken.
+          Heb jij een passie voor Cloud, DevOps, Kubernetes, Ansible, Docker of
+          platformen? Kom dan nu ons groeiende team versterken voor de volgende
+          uitdaging in jouw cariére.
         </p>
         <!-- Afbeelding voor carrières sectie -->
         <div class="row">
           <div class="col s12 m10 offset-m1 l8 offset-l2">
             <div style="padding: 0; overflow: hidden; border-radius: 12px">
               <img
-                src="https://cdn.prod.website-files.com/5ce11396d0cadb67eb2cac0e/671267a64990b0599f38631b_Mentorship%20and%20Employee%20Productivity.png"
-                alt="[Afbeelding van team dat samenwerkt aan een project]"
+                src="images/yosuf-stephan.png"
+                alt="[Afbeelding van het team dat samenwerkt aan een project]"
                 class="responsive-img"
                 style="border-radius: 12px"
               />
@@ -1008,9 +1059,9 @@
           </div>
         </div>
         <a
-          href="#"
+          href="#contact"
           class="waves-effect waves-light custom-btn outline-btn-custom"
-          >Ontdek Carrièremogelijkheden</a
+          >Neem Contact Op</a
         >
       </div>
     </section>
@@ -1019,12 +1070,8 @@
     <section id="contact" class="contact-section">
       <div class="container contact-content">
         <h2 class="center-align white-text">
-          Neem <span class="orange-text">Contact Op</span>
+          Neem contact op met <span class="orange-text">ons</span>
         </h2>
-        <p class="flow-text white-text">
-          We horen graag van u. Neem contact op via een van de onderstaande
-          kanalen of vul ons contactformulier in.
-        </p>
 
         <div class="row center-align" style="margin-top: 40px">
           <!-- E-mail icoon -->
@@ -1073,10 +1120,6 @@
             </a>
           </div>
         </div>
-
-        <p class="white-text" style="margin-top: 30px">
-          Voel je vrij om contact met ons op te nemen via social media!
-        </p>
       </div>
     </section>
 
@@ -1084,13 +1127,13 @@
     <footer class="page-footer">
       <div class="container">
         <div class="row">
-          <div class="col l5 s12">
+          <div class="col l6 s12">
             <h5 class="white-text heavy-text-logo">SOFTWAREDAM</h5>
             <p class="grey-text text-lighten-4">
               Bouwen, migreren en transformeren van digitale landschappen.
             </p>
           </div>
-          <div class="col l3 s12">
+          <div class="col l6 s12">
             <h5 class="white-text">Links</h5>
             <ul>
               <li>
@@ -1113,17 +1156,6 @@
               </li>
             </ul>
           </div>
-          <div class="col l4 s12">
-            <h5 class="white-text">Locatie</h5>
-            <div class="map-container">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d313387.29965421814!2d4.366330087508841!3d52.14635753346135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c923cc1eb31b%3A0xb3d5728fa1a57c2!2sSoftwaredam!5e0!3m2!1sen!2snl!4v1750829472406!5m2!1sen!2snl"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
         </div>
       </div>
       <div class="footer-copyright">
@@ -1134,6 +1166,17 @@
             >Algemene voorwaarden</a
           >
         </div>
+      </div>
+      <div class="map-container">
+        <iframe
+          title="Map with location of Softwaredam"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d313391.6185958521!2d4.363112116784466!3d52.145743853299464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c923cc1eb31b%3A0xb3d5728fa1a57c2!2sSoftwaredam!5e0!3m2!1snl!2snl!4v1752053546061!5m2!1snl!2snl"
+          height="30"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </footer>
 
@@ -1258,51 +1301,62 @@
         function initializeServices() {
           const servicesData = [
             {
-              icon: "cloud_queue",
-              title: "Cloud Platforms",
-              description:
-                "Benut het volledige potentieel van toonaangevende cloudproviders. Wij zijn gespecialiseerd in het ontwerpen, implementeren en beheren van schaalbare, veilige en kosteneffectieve cloudinfrastructuren die zijn afgestemd op uw bedrijfsbehoeften. Van initiële architectuur en installatie tot doorlopende monitoring en optimalisatie, wij bieden end-to-end expertise. We helpen u serverloos computergebruik, containerisatie en data-analysediensten te benutten om flexibele en veerkrachtige systemen te bouwen.",
-              items: [
-                "Cloud Infrastructuur Ontwerp & Implementatie",
-                "Beheerde Cloud Diensten & Optimalisatie",
-                "Cloud Beveiliging & Compliance",
-                "Kostenbeheer & Governance",
-              ],
-            },
-            {
               icon: "swap_horiz",
               title: "Migraties",
               description:
-                "Faciliteer naadloze overgangen van uw bestaande applicaties, databases en gehele IT-infrastructuur naar moderne cloudomgevingen. Wij maken gebruik van onze **eigen migratiestrategie en gespecialiseerde tools** om downtime te minimaliseren, gegevensintegriteit te waarborgen en prestaties na de migratie te optimaliseren. We behandelen complexe scenario's, van lift-and-shift tot re-platforming en re-architectuur, en bieden een duidelijke roadmap en deskundige uitvoering.",
+                "Wij zijn gespecialiseerd in het migreren van platformen en complexe softwareomgevingen. Van analyse, planning tot de daadwerkelijke uitvoering, wij begeleiden elke fase van het migratieproces. Ons op maat ontwikkelde aanpak biedt u doorlopend inzicht, zodat u vóór, tijdens en na de migratie volledige controle behoudt. Ons gespecialiseerd ontwikkelde en geselecteerde tooling biedt garantie voor veilige data migratie. Met onze software-expertise zorgen we voor een vlekkeloze migratie.",
               items: [
-                "Applicatie- & Gegevensmigratiestrategie",
-                "On-premises naar Cloud Migratie",
+                "Near Zero-downtime Migraties",
                 "Cloud-naar-Cloud Migratie",
-                "Database Migratiediensten",
-              ],
-            },
-            {
-              icon: "build",
-              title: "DevOps Transformaties",
-              description:
-                "Versnel uw softwareleveringspijplijn en stimuleer een cultuur van samenwerking en continue verbetering met onze uitgebreide DevOps-transformatiediensten. Wij implementeren toonaangevende praktijken, tools en automatisering om uw ontwikkel-, test-, en implementatiecycli te stroomlijnen, waardoor een snellere time-to-market en software van hogere kwaliteit wordt gegarandeerd.",
-              items: [
-                "CI/CD Pipeline Implementatie",
-                "Infrastructuur als Code (IaC)",
-                "Containerisatie & Orchestratie (Docker, Kubernetes)",
-                "DevSecOps Integratie & Best Practices",
+                "On-premises naar Cloud Migratie",
+                "Applicatie- & Datamigratiestrategie",
+                "Op maat gemaakte Migrations Patterns",
+                "Op maat gemaakte en geselecteerde Data migratie tools",
               ],
             },
             {
               icon: "school",
               title: "Trainingen",
               description:
-                "Versterk uw team met de kennis en vaardigheden die nodig zijn om te gedijen in het evoluerende technologielandschap. Wij bieden op maat gemaakte trainingsprogramma's aan in DevOps-methodologieën, Cloudmigraties en diverse Cloud Platforms. Onze workshops zijn ontworpen om hands-on en praktisch te zijn, met zowel theoretische concepten als real-world toepassingen, zodat uw personeel direct kan toepassen wat ze leren.",
+                "Bij Softwaredam bieden we trainingen aan die uw team de kennis en vaardigheden geven die nodig zijn om de snel evoluerende platformen en de cloud wereld voor te blijven. Wij richten ons op de meest cruciale aspecten van cloudtechnologie en DevOps, zodat u de volledige potentie van uw IT-omgeving kunt benutten. Een greep uit onze trainingen:",
               items: [
-                "Op Maat Gemaakte DevOps Workshops",
-                "Cloud Platform Certificeringen (AWS, Azure, GCP)",
-                "Migratiestrategie & Uitvoering Training",
-                "Geavanceerde Automatisering & Scripting Cursussen",
+                "(Cloud) Observability",
+                "Standaard Platform (SP)",
+                "CICD en Automatisering",
+                "Kubernetes",
+                "Containerisation zoals Docker",
+                "Tools zoals Helm, Kustomize, SOPS, ArgoCD, FluxCD",
+                "Volledige GitLab CICD platform",
+              ],
+            },
+            {
+              icon: "cloud_queue",
+              title: "Cloud Platforms",
+              description:
+                "Benut het volledige potentieel van cloudproviders. Wij zijn gespecialiseerd in het ontwerpen, implementeren en beheren van schaalbare en veilige cloudinfrastructuren die zijn afgestemd op uw bedrijfsbehoeften. Van initiële architectuur en installatie tot doorlopende monitoring en optimalisatie, wij bieden end-to-end expertise. We helpen u containerisatie en data-analysediensten te benutten om flexibele en veerkrachtige systemen te bouwen.",
+              items: [
+                "Landen op het Standaard Platform (SP) van Logius",
+                "Gebruik maken van Hetzner Cloud",
+                "Public cloud",
+                "Ontwerpen en implementatie generieke diensten vanuit een systeem gedachte voor meerdere DevOps teams",
+                "Cloud Infrastructuur Ontwerp & Implementatie",
+                "Het opzetten van Disaster Recoverable systemen op meerdere datacenters",
+                "Beheerde Cloud Diensten & Optimalisatie",
+                "Cloud Beveiliging & Compliance",
+                "Kostenbeheer & Governance",
+              ],
+            },
+
+            {
+              icon: "build",
+              title: "DevOps Transformaties",
+              description:
+                "Versnel uw softwareleveringspijplijn en stimuleer een cultuur van samenwerking en continue verbetering met DevOps. Wij helpen uw development en operations teams om samen te werken aan het creëren van een cultuur van continue integratie en levering. We helpen u met het implementeren van CICD-pipelines, Infra as Code (IaC) en geautomatiseerde tests om de kwaliteit, veiligheid en snelheid van softwarelevering te verbeteren.",
+              items: [
+                "DevSecOps Integratie & Best Practices",
+                "CICD Pipeline Implementatie",
+                "Infrastructuur als Code (IaC)",
+                "Containerisatie & Orchestratie (Docker, Kubernetes)",
               ],
             },
           ];
@@ -1342,7 +1396,7 @@
               name: "Yosuf Haydary",
               role: "Oprichter van Softwaredam",
               description:
-                "Yosuf Haydary is the founder of Softwaredam and a Senior Consultant. He has extensive experience in mission-critical software and systems engineering and architecture. Yosuf loves to learn, code, coach, and write. He holds a Master of Science (MSc.) degree in Software Engineering from the University of Amsterdam.",
+                "Yosuf Haydary is de oprichter van Softwaredam en een senior consultant. Hij heeft een uitgebreide expertise in bedrijfskritische software, systeem engineering en architectuur. Yosuf houd van leren, programmeren, coachen en schrijven. Hij heeft een Master of Science (MSc.) diploma in software engineering van de Universiteit van Amsterdam.",
               social: {
                 email: "mailto:yosuf@softwaredam.com",
                 linkedin: "https://www.linkedin.com/in/yosuf/",
@@ -1354,7 +1408,7 @@
               name: "Stephan Duivelshof",
               role: "Junior DevOps Developer",
               description:
-                "Ik ben een derdejaarsstudent Innovative Development met een passie voor het identificeren en oplossen van vraagstukken met behulp van technologie. Als parttime DevOps Developer vertaal ik deze innovatieve aanpak naar de praktijk, door middel van het optimaliseren van workflows en het bouwen van efficiënte systemen die klaar zijn voor de toekomst.",
+                "Stephan is een derdejaarsstudent Innovative Development met een passie voor het identificeren en oplossen van vraagstukken met behulp van technologie. Als parttime DevOps Developer vertaald hij deze innovatieve aanpak naar de praktijk. Met deze aanpak zoekt hij voor de juiste oplossing voor jou bedrijf!",
               social: {
                 email: "mailto:stephan.duivelshof@softwaredam.com",
                 linkedin: "https://www.linkedin.com/in/stephan-duivelshof",
@@ -1520,7 +1574,7 @@
               companyName: "Gameye",
               stars: 5,
               complexity: "Project Complexiteit: 7/10",
-              feedback: `"Yosuf heeft bij Gameye een paar opdrachten uitgevoerd met betrekking tot infrastructuur en version control. Om een potentiële samenwerking met een triple A games studio aan te kunnen gaan, heeft Yosuf voor ons een migratie uitgevoerd van al onze source code van GitHub naar GitLab. Dit heeft Yosuf op een programmatische manier ontwikkeld en ook heeft hij voor ons de CI/CD pipelines opgesteld die onze source code bouwt en deployed. Ook heeft hij zich in kunnen zetten als consultant om ons te kunnen adviseren over het delen van source code tussen twee aparte bedrijven. Daarnaast heeft hij ook een proposal geschreven voor een nieuwe integratie met Google Cloud dat een onderdeel zou zijn van Gameye's flagship product.
+              feedback: `"Yosuf heeft bij Gameye een paar opdrachten uitgevoerd met betrekking tot infrastructuur en version control. Om een potentiële samenwerking met een triple A games studio aan te kunnen gaan, heeft Yosuf voor ons een migratie uitgevoerd van al onze source code van GitHub naar GitLab. Dit heeft Yosuf op een programmatische manier ontwikkeld en ook heeft hij voor ons de CICD pipelines opgesteld die onze source code bouwt en deployed. Ook heeft hij zich in kunnen zetten als consultant om ons te kunnen adviseren over het delen van source code tussen twee aparte bedrijven. Daarnaast heeft hij ook een proposal geschreven voor een nieuwe integratie met Google Cloud dat een onderdeel zou zijn van Gameye's flagship product.
                   Qua samenwerking is Yosuf helemaal top. Yosuf is iemand die oplossingsgericht werkt, de juiste vragen stelt en het vooral samen probeert te doen. Zeker een aanrader."`,
               customerInfo: "Ilyas Baas, Functional Architect bij Gameye",
             },
