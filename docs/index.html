@@ -1,9 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta tags begin -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Migreer en train slim! Wij bieden naadloze IT-migraties (Cloud, On-premises, Applicatie & Data) én gespecialiseerde trainingen in Cloud Observability, Kubernetes, CI/CD en Docker. Optimaliseer uw IT met Softwaredam."
+    />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Softwaredam" />
+    <meta name="author" content="Softwaredam, info@softwaredam.com" />
+    <meta property="og:title" content="Softwaredam" />
+    <meta
+      property="og:description"
+      content="Migreer en train slim! Wij bieden naadloze IT-migraties (Cloud, On-premises, Applicatie & Data) én gespecialiseerde trainingen in Cloud Observability, Kubernetes, CI/CD en Docker. Optimaliseer uw IT met Softwaredam."
+    />
+    <meta
+      property="og:image"
+      content="https://softwaredam.com/images/logo.png"
+    />
+    <meta property="og:url" content="https://softwaredam.com" />
+    <!-- Meta tags end -->
     <title>Softwaredam - Bouwen. Migreren. Transformeren.</title>
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
+    <link rel="icon" sizes="192x192" href="images/logo.svg" />
+    <link rel="apple-touch-icon" href="images/logo.png" />
     <!-- Materialize CSS CDN -->
     <link
       rel="stylesheet"
@@ -733,17 +755,38 @@
         position: relative;
         z-index: 1;
       }
+
+      @media (max-width: 992px) {
+        /* Materialize 'l' breakpoint (grotere tablets/kleine desktops) */
+        .map-container {
+          padding-bottom: 40% !important;
+        }
+      }
+      @media (max-width: 768px) {
+        /* Materialize 'm' breakpoint (tablets) */
+        .map-container {
+          padding-bottom: 60% !important;
+        }
+      }
+      @media (max-width: 600px) {
+        /* Materialize 's' breakpoint (mobiel) */
+        .map-container {
+          padding-bottom: 50% !important;
+        }
+      }
+
       /* Style for responsive iframe container */
       .map-container {
         position: relative;
-        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        padding-bottom: 20%;
         height: 0;
         overflow: hidden;
         max-width: 100%;
-        border-radius: 8px;
+        /* border-radius: 8px; */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         margin-top: 20px;
       }
+
       .map-container iframe {
         position: absolute;
         top: 0;
@@ -784,7 +827,7 @@
         background-image: url("https://www.softwaredam.com/images/main-background.png"); /* Achtergrondafbeelding */
         background-size: cover;
         background-position: center;
-        padding: 30px 0;
+        padding-top: 30px;
         color: #888;
         text-align: center;
       }
@@ -970,15 +1013,15 @@
           Klaar om te <span class="orange-text">Innoveren?</span>
         </h2>
         <p class="flow-text white-text">
-          Of u nu uw infrastructuur wilt moderniseren, uw processen wilt
-          stroomlijnen of simpelweg deskundige begeleiding nodig heeft,
-          Softwaredam is er om u te helpen. Laten we uw unieke uitdagingen
-          bespreken.
+          Of u nu streeft naar een gemoderniseerde infrastructuur,
+          gestroomlijnde processen, of simpelweg deskundige begeleiding nodig
+          heeft, Softwaredam staat klaar om u te ondersteunen. Laten we samen uw
+          specifieke uitdagingen bespreken en de beste weg vooruit vinden.
         </p>
         <a
           href="mailto:info@softwaredam.com"
           class="waves-effect waves-light custom-btn primary-btn"
-          >Krijg een gratis consult</a
+          >Gratis consult</a
         >
       </div>
     </section>
@@ -987,19 +1030,18 @@
     <section id="careers" class="cta-section" style="background-color: #05040a">
       <div class="container">
         <h2 class="center-align white-text">
-          Geef de Toekomst Vorm met <span class="orange-text">Ons</span>
+          Groei Met <span class="orange-text">Ons</span> Mee!
         </h2>
         <p class="flow-text white-text">
-          Gepassioneerd door Cloud, DevOps en baanbrekende transformaties? We
-          zijn altijd op zoek naar getalenteerde individuen om ons groeiende
-          team te versterken.
+          Heb jij een passie voor cloud, devops en transformaties kom dan nu ons
+          groeiende team versterken voor de volgende uitdaging in jouw cariére.
         </p>
         <!-- Afbeelding voor carrières sectie -->
         <div class="row">
           <div class="col s12 m10 offset-m1 l8 offset-l2">
             <div style="padding: 0; overflow: hidden; border-radius: 12px">
               <img
-                src="https://cdn.prod.website-files.com/5ce11396d0cadb67eb2cac0e/671267a64990b0599f38631b_Mentorship%20and%20Employee%20Productivity.png"
+                src="images/yosuf-stephan.png"
                 alt="[Afbeelding van team dat samenwerkt aan een project]"
                 class="responsive-img"
                 style="border-radius: 12px"
@@ -1008,9 +1050,9 @@
           </div>
         </div>
         <a
-          href="#"
+          href="#contact"
           class="waves-effect waves-light custom-btn outline-btn-custom"
-          >Ontdek Carrièremogelijkheden</a
+          >Neem Contact Op</a
         >
       </div>
     </section>
@@ -1023,7 +1065,7 @@
         </h2>
         <p class="flow-text white-text">
           We horen graag van u. Neem contact op via een van de onderstaande
-          kanalen of vul ons contactformulier in.
+          kanalen.
         </p>
 
         <div class="row center-align" style="margin-top: 40px">
@@ -1084,13 +1126,13 @@
     <footer class="page-footer">
       <div class="container">
         <div class="row">
-          <div class="col l5 s12">
+          <div class="col l6 s12">
             <h5 class="white-text heavy-text-logo">SOFTWAREDAM</h5>
             <p class="grey-text text-lighten-4">
               Bouwen, migreren en transformeren van digitale landschappen.
             </p>
           </div>
-          <div class="col l3 s12">
+          <div class="col l6 s12">
             <h5 class="white-text">Links</h5>
             <ul>
               <li>
@@ -1113,17 +1155,6 @@
               </li>
             </ul>
           </div>
-          <div class="col l4 s12">
-            <h5 class="white-text">Locatie</h5>
-            <div class="map-container">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d313387.29965421814!2d4.366330087508841!3d52.14635753346135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c923cc1eb31b%3A0xb3d5728fa1a57c2!2sSoftwaredam!5e0!3m2!1sen!2snl!4v1750829472406!5m2!1sen!2snl"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-          </div>
         </div>
       </div>
       <div class="footer-copyright">
@@ -1134,6 +1165,16 @@
             >Algemene voorwaarden</a
           >
         </div>
+      </div>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d313391.6185958521!2d4.363112116784466!3d52.145743853299464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c923cc1eb31b%3A0xb3d5728fa1a57c2!2sSoftwaredam!5e0!3m2!1snl!2snl!4v1752053546061!5m2!1snl!2snl"
+          height="30"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </footer>
 
@@ -1258,6 +1299,31 @@
         function initializeServices() {
           const servicesData = [
             {
+              icon: "swap_horiz",
+              title: "Migraties",
+              description:
+                "Wij zijn gespecialiseerd in het migreren van platformen en complexe softwareomgevingen. Van analyse, planning tot de daadwerkelijke uitvoering, wij begeleiden elke fase van het migratieproces. Onze aanpak biedt u doorlopend inzicht, zodat u vóór, tijdens en na de migratie volledige controle behoudt. Met onze software-expertise zorgen we voor een vlekkeloze migratie.",
+              items: [
+                "Near Zero-downtime Migraties",
+                "Cloud-naar-Cloud Migratie",
+                "On-premises naar Cloud Migratie",
+                "Applicatie- & Datamigratiestrategie",
+              ],
+            },
+            {
+              icon: "school",
+              title: "Trainingen",
+              description:
+                "Bij Softwaredam bieden we gespecialiseerde trainingen aan die uw team de kennis en vaardigheden geven die nodig zijn om de snel evoluerende cloud wereld voor te blijven. Wij richten ons op de meest cruciale aspecten van cloudtechnologie en DevOps, zodat u de volledige potentie van uw IT-omgeving kunt benutten. Wij bieden de volgende trainingen aan:",
+              items: [
+                "Cloud Observability",
+                "Standaard platform",
+                "CICD/Automatisering",
+                "Kubernetes",
+                "Docker",
+              ],
+            },
+            {
               icon: "cloud_queue",
               title: "Cloud Platforms",
               description:
@@ -1269,18 +1335,7 @@
                 "Kostenbeheer & Governance",
               ],
             },
-            {
-              icon: "swap_horiz",
-              title: "Migraties",
-              description:
-                "Faciliteer naadloze overgangen van uw bestaande applicaties, databases en gehele IT-infrastructuur naar moderne cloudomgevingen. Wij maken gebruik van onze **eigen migratiestrategie en gespecialiseerde tools** om downtime te minimaliseren, gegevensintegriteit te waarborgen en prestaties na de migratie te optimaliseren. We behandelen complexe scenario's, van lift-and-shift tot re-platforming en re-architectuur, en bieden een duidelijke roadmap en deskundige uitvoering.",
-              items: [
-                "Applicatie- & Gegevensmigratiestrategie",
-                "On-premises naar Cloud Migratie",
-                "Cloud-naar-Cloud Migratie",
-                "Database Migratiediensten",
-              ],
-            },
+
             {
               icon: "build",
               title: "DevOps Transformaties",
@@ -1291,18 +1346,6 @@
                 "Infrastructuur als Code (IaC)",
                 "Containerisatie & Orchestratie (Docker, Kubernetes)",
                 "DevSecOps Integratie & Best Practices",
-              ],
-            },
-            {
-              icon: "school",
-              title: "Trainingen",
-              description:
-                "Versterk uw team met de kennis en vaardigheden die nodig zijn om te gedijen in het evoluerende technologielandschap. Wij bieden op maat gemaakte trainingsprogramma's aan in DevOps-methodologieën, Cloudmigraties en diverse Cloud Platforms. Onze workshops zijn ontworpen om hands-on en praktisch te zijn, met zowel theoretische concepten als real-world toepassingen, zodat uw personeel direct kan toepassen wat ze leren.",
-              items: [
-                "Op Maat Gemaakte DevOps Workshops",
-                "Cloud Platform Certificeringen (AWS, Azure, GCP)",
-                "Migratiestrategie & Uitvoering Training",
-                "Geavanceerde Automatisering & Scripting Cursussen",
               ],
             },
           ];
@@ -1342,7 +1385,7 @@
               name: "Yosuf Haydary",
               role: "Oprichter van Softwaredam",
               description:
-                "Yosuf Haydary is the founder of Softwaredam and a Senior Consultant. He has extensive experience in mission-critical software and systems engineering and architecture. Yosuf loves to learn, code, coach, and write. He holds a Master of Science (MSc.) degree in Software Engineering from the University of Amsterdam.",
+                "Yosuf Haydary is de oprichter van Softwaredam en een senior consultant. Hij heeft een uitgebreide expertise in bedrijfskritische software, systeem engineering en architectuur. Yosuf houd van leren, programmeren, coachen en schrijven. Hij heeft een Master of Science (MSc.) diploma in software engineering van de Universiteit van Amsterdam.",
               social: {
                 email: "mailto:yosuf@softwaredam.com",
                 linkedin: "https://www.linkedin.com/in/yosuf/",
@@ -1354,7 +1397,7 @@
               name: "Stephan Duivelshof",
               role: "Junior DevOps Developer",
               description:
-                "Ik ben een derdejaarsstudent Innovative Development met een passie voor het identificeren en oplossen van vraagstukken met behulp van technologie. Als parttime DevOps Developer vertaal ik deze innovatieve aanpak naar de praktijk, door middel van het optimaliseren van workflows en het bouwen van efficiënte systemen die klaar zijn voor de toekomst.",
+                "Stephan is een derdejaarsstudent Innovative Development met een passie voor het identificeren en oplossen van vraagstukken met behulp van technologie. Als parttime DevOps Developer vertaald hij deze innovatieve aanpak naar de praktijk. Met deze aanpak zoekt hij voor de juiste oplossing voor jou bedrijf!",
               social: {
                 email: "mailto:stephan.duivelshof@softwaredam.com",
                 linkedin: "https://www.linkedin.com/in/stephan-duivelshof",
