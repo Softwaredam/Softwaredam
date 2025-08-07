@@ -1,5 +1,5 @@
 // Fetch the external header.html template and define the custom element
-fetch('components/header.html')
+fetch('/docs/components/header.html')
   .then(res => res.text())
   .then(html => {
     document.body.insertAdjacentHTML('beforeend', html);
@@ -15,7 +15,7 @@ fetch('components/header.html')
     customElements.define('super-header', SuperHeader);
   });
 
-fetch('components/footer.html')
+fetch('/docs/components/footer.html')
   .then(res => res.text())
   .then(html => {
     document.body.insertAdjacentHTML('beforeend', html);
