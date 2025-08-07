@@ -1,296 +1,818 @@
+/* Reset standaard browsermarges en padding */
+html,
 body {
-  font-family: "Outfit", serif;
-  font-size: 2.5em;
+  margin: 0;
+  padding: 0;
 }
 
-@media only screen and (min-width: 1200px) {
+body {
+  font-family: "Outfit", sans-serif; /* Lettertype gewijzigd naar Outfit */
+  background-color: #05040a; /* Donkere achtergrond */
+  color: #e0e0e0; /* Lichte tekst voor contrast */
+  overflow-x: hidden; /* Voorkom horizontaal scrollen */
+}
+/* Media query voor het aanpassen van de padding op de body als de navigatiebalk hoger is op kleinere schermen. */
+/* De padding-top van de body is verwijderd in de vorige stappen, dus deze media query kan mogelijk ook overbodig zijn, */
+/* maar ik laat hem staan voor het geval er specifieke Materialize-gedragingen zijn die dit vereisen. */
+@media (max-width: 992px) {
   body {
-    font-size: 1.8em;
+    /* Was eerder padding-top: 56px; - nu ook verwijderd zoals gevraagd in algemene instructies */
   }
 }
 
-a {
+/* Aangepaste oranje kleur voor Materialize-componenten */
+.orange-bg {
+  background-color: #ff4a00 !important;
+}
+.orange-text {
+  color: #ff4a00 !important;
+}
+.btn-flat.orange-text:hover {
+  background-color: rgba(255, 74, 0, 0.1);
+}
+
+/* Navigatiebalk aanpassingen voor donker thema */
+nav.nav-dark-bg {
+  /* Nieuwe klasse voor donkere navigatiebalkachtergrond */
+  background-color: #05040a !important;
+  box-shadow: none; /* Verwijder standaard Materialize-schaduw indien gewenst */
+}
+nav .brand-logo {
+  padding-left: 0; /* Padding-left verwijderd van brand-logo, container regelt het */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+nav .brand-logo img {
+  height: 40px; /* Pas hoogte aan voor logo */
+  width: auto;
+}
+/* Standaard padding voor nav links (desktop) */
+nav ul.right.hide-on-med-and-down li a {
+  padding: 0 7.5px; /* Halveer de horizontale padding */
+  font-weight: 500;
+}
+nav ul a:hover {
+  color: #ff4a00; /* Aangepast oranje bij hover */
+  background-color: transparent; /* Houd achtergrond transparant */
+}
+/* Sidenav achtergrond voor mobiel */
+.sidenav.nav-dark-bg {
+  background-color: #05040a !important;
+}
+
+/* Pas padding van navigatiebalkcontainer aan voor kleine schermen */
+@media (max-width: 600px) {
+  nav .nav-wrapper.container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* Sidenav specifieke styling om ervoor te zorgen dat deze bovenaan en zichtbaar is */
+.sidenav {
+  z-index: 9999 !important; /* Hoge z-index om ervoor te zorgen dat deze altijd bovenaan staat */
+}
+
+/* Maak de sidenav-overlay volledig transparant */
+.sidenav-overlay {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0
+  ) !important; /* Volledig transparant zwart */
+  opacity: 0 !important; /* Zorg ervoor dat er geen dimmend effect is */
+  z-index: 9998 !important; /* Z-index toegevoegd */
+}
+
+/* Hero sectie */
+.hero-section {
+  background-image: url("https://www.softwaredam.com/images/main-background.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 4rem; /* Groter lettertype voor impact */
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-align: left; /* Expliciet links uitlijnen */
+}
+.hero-subtitle {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  text-align: left; /* Ook subtitel links uitlijnen */
+}
+
+/* Stijl voor de dikkere, smaller gespatieerde tekst in titels */
+.heavy-text {
+  font-weight: 900;
+  letter-spacing: -1.5px; /* Pas deze waarde aan voor de gewenste afstand */
+}
+
+/* Specifieke stijl voor de SOFTWAREDAM in de navigatiebalk en voettekst */
+.heavy-text-logo {
+  font-weight: 800; /* Gewijzigd van 900 naar 800 */
+  letter-spacing: -0.8px; /* Lichtjes verminderde letterafstand */
+}
+
+/* Pas padding aan voor mobiele apparaten en lettergrootte van hero-titel */
+@media (max-width: 600px) {
+  /* Materialize 's' breakpoint */
+  .hero-content {
+    padding: 0 5px; /* Nog kleinere horizontale padding */
+  }
+  .hero-title {
+    font-size: 2.2rem; /* Aangepaste lettergrootte voor betere pasvorm op kleine mobiele schermen */
+    line-height: 1.1; /* Pas lijnhoogte aan om overflow te voorkomen */
+  }
+  .hero-subtitle {
+    font-size: 1.4rem; /* Aangepaste lettergrootte voor subtitel */
+  }
+}
+
+/* Aangepaste knopstijlen (replicatie van vorige Tailwind-look) */
+.custom-btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.2rem; /* Aangepast voor vergelijkbare grootte als origineel */
+  padding: 1rem 2rem; /* Equivalent aan px-8 py-4 */
+  border-radius: 9999px; /* Voor rounded-full */
+  font-weight: 700; /* Voor font-bold */
+  transition: all 0.3s ease-in-out;
+  margin: 10px; /* Om ruimte te geven indien gestapeld of naast elkaar */
+  line-height: 1; /* Pas lijnhoogte aan voor consistente knopgrootte */
+  height: auto; /* Laat hoogte zich aanpassen aan padding */
+}
+.custom-btn.primary-btn {
+  background-color: #ff4a00; /* bg-custom-orange */
+  color: white; /* text-white */
+  box-shadow: 0 10px 15px -3px rgba(255, 74, 0, 0.4),
+    0 4px 6px -2px rgba(255, 74, 0, 0.2); /* shadow-xl equivalent */
+}
+.custom-btn.primary-btn:hover {
+  transform: translateY(-3px) scale(1.02); /* hover:translateY(-3px) hover:scale-105 */
+  box-shadow: 0 20px 25px -5px rgba(255, 74, 0, 0.5),
+    0 10px 10px -5px rgba(255, 74, 0, 0.3); /* hover:shadow-2xl equivalent */
+}
+
+.custom-btn.outline-btn-custom {
+  /* Hernoemd om conflict met Materialize's .outline-btn te voorkomen */
+  background-color: transparent;
+  border: 2px solid #ff4a00; /* border-2 border-custom-orange */
+  color: #ff4a00; /* text-custom-orange */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md equivalent */
+}
+.custom-btn.outline-btn-custom:hover {
+  background-color: #ff4a00; /* hover:bg-custom-orange */
+  color: #05040a; /* hover:text-white */
+  transform: translateY(-3px) scale(1.02); /* hover:translateY(-3px) hover:scale-105 */
+  box-shadow: 0 10px 15px -3px rgba(255, 74, 0, 0.4),
+    0 4px 6px -2px rgba(255, 74, 0, 0.2); /* hover:shadow-xl equivalent */
+}
+
+/* Visuele items helden (rechterkant) */
+.hero-visual-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem; /* Ruimte vanaf knoppen op mobiel/tablet */
+  align-items: center; /* Items centreren op kleinere schermen */
+}
+@media (min-width: 992px) {
+  /* Op desktop, links uitlijnen en marge toevoegen */
+  .hero-visual-items {
+    align-items: flex-start;
+    margin-left: 4rem;
+    margin-top: 0;
+  }
+}
+.hero-visual-link {
   text-decoration: none;
   color: inherit;
 }
-
-p {
-  color: white;
-  font-weight: 150;
+.hero-visual-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  position: relative;
 }
-
-h1 {
-  color: #ffffff;
-  letter-spacing: calc(1em * 0.15);
-  font-weight: 800;
+.hero-visual-item:hover {
+  transform: translateX(5px);
+  color: #ff4a00;
+}
+.hero-visual-item .material-icons {
+  font-size: 2.5rem;
+  color: #ff4a00;
+  flex-shrink: 0;
+}
+.hero-visual-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: inherit;
   margin: 0;
 }
 
-.smaller {
-  font-size: 0.6em;
+/* Diensten sectie */
+.services-section {
+  background-color: white; /* Achtergrond van service sectie gewijzigd naar wit */
+  padding: 80px 0;
+  color: black; /* Tekstkleur gewijzigd naar zwart voor leesbaarheid */
+}
+.services-section h2 {
+  color: black; /* Koptekst gewijzigd naar zwart */
+}
+.service-block {
+  background-color: #f5f9fa; /* De kleur van de servicekaart gewijzigd naar #F5F9FA */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px; /* Ruimte tussen serviceblokken */
+  cursor: pointer; /* Maak de hele kaart klikbaar */
+}
+.service-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px; /* Standaard hoogte van de bovenste rand */
+  background: linear-gradient(to right, #ff4a00, #f06a2e);
+  opacity: 0.8;
+  transition: height 0.3s ease-in-out; /* Behoud transition voor de hoogte van de bovenste rand */
+}
+.service-block:hover {
+  transform: translateY(0);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Terug naar standaard schaduw */
+}
+.service-block:hover::before {
+  height: 5px; /* Terug naar standaard hoogte bij hover */
 }
 
-h2 {
-  color: #ffffff;
-  letter-spacing: calc(1em * 0.15);
+/* Content wrapper voor de 'gevouwen' functionaliteit */
+.service-block .content-wrapper {
+  max-height: 100px; /* Initiële gevouwen hoogte */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.5s ease-out; /* Vloeiende overgang */
+  width: 100%; /* Zorg ervoor dat het de volledige breedte inneemt */
+}
+
+/* Fading effect aan de onderkant van de gevouwen kaart */
+.service-block .content-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Hoogte van het fade-effect */
+  background: linear-gradient(
+    to top,
+    #f5f9fa,
+    rgba(245, 249, 250, 0)
+  ); /* Fade van kaartachtergrond naar transparant */
+  pointer-events: none; /* Zorgt ervoor dat klikken erdoorheen gaan */
+}
+
+/* Stijl voor de 'uitgevouwen' staat */
+.service-block.unfolded .content-wrapper {
+  max-height: 1000px; /* Groot genoeg om alle inhoud te tonen */
+}
+/* Verberg het fade-effect wanneer uitgevouwen */
+.service-block.unfolded .content-wrapper::after {
+  display: none;
+}
+
+.service-block .icon-wrapper {
+  background-color: rgba(255, 74, 0, 0.15);
+  padding: 12px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  display: inline-flex;
+}
+.service-block .icon-wrapper .material-icons {
+  font-size: 2.5rem;
+  color: #ff4a00;
+}
+.service-block h3 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  color: black; /* Tekstkleur gewijzigd naar zwart */
+  line-height: 1.2;
+}
+.service-block p {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: black; /* Tekstkleur gewijzigd naar zwart */
+}
+.service-block ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+.service-block ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: black; /* Tekstkleur gewijzigd naar zwart */
+  font-size: 1rem;
+}
+.service-block ul li::before {
+  content: "✓";
+  color: #ff4a00;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* 'Lees Meer'/'Toon Minder' knop styling */
+.read-more-btn {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ff4a00;
+  cursor: pointer;
+  text-align: right;
+  width: 100%;
+  display: block;
+  text-decoration: underline; /* Onderstreping om aan te geven dat het klikbaar is */
+}
+.read-more-btn:hover {
+  color: #05040a; /* Lichtere kleur bij hover voor betere zichtbaarheid */
+}
+
+/* About Us Sectie */
+.about-us-section {
+  background-color: #f5f9fa; /* Gewijzigd naar de gevraagde kleur */
+  padding: 80px 0;
+  color: #e0e0e0;
+  text-align: center;
+}
+.about-us-section h2 {
+  color: black; /* Kleur aangepast voor leesbaarheid */
+}
+.section-description {
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  color: black; /* Kleur aangepast voor leesbaarheid */
+}
+.team-member-card {
+  background-color: white; /* Achtergrond van teamkaarten gewijzigd naar wit */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* min-height: 400px; */ /* Verwijderd om de hoogte flexibel te maken voor inklappen */
+  position: relative; /* Nodig voor fading effect */
+  overflow: hidden; /* Nodig voor inklappen */
+  margin-bottom: 30px;
+  cursor: pointer; /* Maak de kaart klikbaar */
+}
+.team-member-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.team-member-card .profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 2px solid #ff4a00; /* Border aangepast: 3px -> 2px */
+  box-shadow: 0 4px 15px rgba(255, 74, 0, 0.1); /* Glow verminderd: alpha 0.3 -> 0.1 */
+}
+.team-member-card h4 {
+  font-size: 1.8rem;
   font-weight: 700;
-  margin: 0;
+  color: black; /* Kleur aangepast voor leesbaarheid */
+  margin-bottom: 5px;
+}
+.team-member-card .role {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #616161; /* Kleur aangepast voor leesbaarheid */
+  margin-bottom: 15px;
+}
+/* Content wrapper voor de 'gevouwen' functionaliteit voor team kaarten */
+.team-member-card .content-wrapper {
+  max-height: 100px; /* Initiële gevouwen hoogte */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.5s ease-out; /* Vloeiende overgang */
+  width: 100%; /* Zorg ervoor dat het de volledige breedte inneemt */
 }
 
-h3 {
-  color: #ffffff;
-  letter-spacing: calc(1em * 0.15);
-  font-weight: 300;
-  margin: 0;
-  margin-top: 120px;
+/* Fading effect aan de onderkant van de gevouwen kaart voor team kaarten */
+.team-member-card .content-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Hoogte van het fade-effect */
+  background: linear-gradient(
+    to top,
+    white,
+    rgba(255, 255, 255, 0)
+  ); /* Fade van kaartachtergrond naar transparant */
+  pointer-events: none; /* Zorgt ervoor dat klikken erdoorheen gaan */
+}
+
+/* Stijl voor de 'uitgevouwen' staat voor team kaarten */
+.team-member-card.unfolded .content-wrapper {
+  max-height: 1000px; /* Groot genoeg om alle inhoud te tonen */
+}
+/* Verberg het fade-effect wanneer uitgevouwen voor team kaarten */
+.team-member-card.unfolded .content-wrapper::after {
+  display: none;
+}
+
+.team-member-card .description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #424242; /* Kleur aangepast voor leesbaarheid */
+  /* flex-grow: 1; */ /* Verwijderd omdat content-wrapper de hoogte regelt */
   margin-bottom: 20px;
 }
-
-h4 {
-  color: #ffffff;
-  letter-spacing: calc(16px * 0.35);
-  font-weight: 100;
+.team-member-card .social-links a {
+  display: inline-block;
+  margin: 0 8px;
+  color: #616161; /* Kleur aangepast voor leesbaarheid */
+  transition: color 0.3s ease;
+}
+.team-member-card .social-links a:hover {
+  color: #ff4a00;
+}
+.team-member-card .social-links i.material-icons {
+  font-size: 1.8rem;
 }
 
-h5 {
-  color: #ffffff;
-  letter-spacing: calc(16px * 0.15);
-  font-weight: 200;
+/* Tech Stack Sectie */
+.tech-stack-section {
+  background-color: #05040a;
+  padding: 80px 0;
+  color: #e0e0e0;
+}
+.tech-stack-items-container {
+  display: flex;
+  flex-wrap: wrap; /* Zorgt ervoor dat items omvouwen indien nodig */
+  justify-content: center; /* Centreer items in de container */
+  gap: 20px; /* Ruimte tussen de items */
+  margin-top: 40px; /* Ruimte onder de titel */
+}
+.tech-stack-item {
+  /* De breedte wordt nu gecontroleerd door flex-basis en max-width, in plaats van Materialize's col-klassen */
+  flex: 0 0 auto; /* Voorkomt dat items uitrekken en zorgt ervoor dat ze hun inhoud respecteren */
+  width: 150px; /* Vaste breedte, kan worden aangepast */
+  max-width: calc(100% / 6 - 20px); /* Standaard: 6 items per rij minus gap */
+  /* Bestaande stijlen behouden */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  min-height: 120px;
+  transition: transform 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+/* Responsieve aanpassingen voor tech-stack-item breedte */
+@media (max-width: 992px) {
+  /* Materialize 'l' breakpoint (grotere tablets/kleine desktops) */
+  .tech-stack-item {
+    max-width: calc(100% / 4 - 20px); /* 4 items per rij */
+  }
+}
+@media (max-width: 768px) {
+  /* Materialize 'm' breakpoint (tablets) */
+  .tech-stack-item {
+    max-width: calc(100% / 3 - 20px); /* 3 items per rij */
+  }
+}
+@media (max-width: 600px) {
+  /* Materialize 's' breakpoint (mobiel) */
+  .tech-stack-item {
+    max-width: calc(100% / 2 - 20px); /* 2 items per rij */
+  }
 }
 
-h6 {
-  color: #ffffff;
-  letter-spacing: calc(16px * 0.15);
-  font-weight: 900;
+.tech-stack-item:hover {
+  transform: translateY(-5px) scale(1.03);
+  border-color: #ff4a00; /* Oranje rand bij hover */
+  background-color: rgba(
+    255,
+    74,
+    0,
+    0.05
+  ); /* Zeer subtiele oranje achtergrond */
+  border-radius: 8px; /* Lichte afronding bij hover */
+}
+.tech-stack-item .tech-logo {
+  width: 50px; /* Iets kleiner logo */
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px; /* Marge verlaagd */
+}
+.tech-stack-item h4 {
+  font-size: 1.1rem; /* Iets kleiner lettertype */
+  font-weight: 600;
+  color: white;
+  margin: 0;
 }
 
-.softwaredam-orange {
+/* Sectie Klantbeoordelingen */
+.endorsements-section {
+  background-color: #f5f9fa; /* Aangepast naar dezelfde kleur als .about-us-section */
+  padding: 80px 0;
+  color: black;
+}
+.endorsements-section h2 {
+  color: black;
+}
+.endorsement-card {
+  background-color: #faf5f5; /* Aangepast naar #FAF5F5 */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  margin-bottom: 30px; /* Ruimte tussen kaarten */
+  min-height: 350px; /* Zorg ervoor dat kaarten een bepaalde hoogte hebben voor consistente lay-out */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Inhoud verdelen */
+  cursor: pointer; /* Maak de hele kaart klikbaar */
+}
+.endorsement-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.endorsement-card .company-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+  border: 2px solid rgba(255, 74, 0, 0.3);
+  background-color: transparent; /* Zorgt ervoor dat placeholder achtergrond transparant is */
+}
+.endorsement-card .company-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #424242; /* Donkerder grijs voor de bedrijfsnaam */
+  margin-bottom: 10px;
+}
+.endorsement-card .stars i.material-icons {
+  font-size: 1.5rem;
+  color: #ff4a00;
+  margin: 0 2px;
+}
+.endorsement-card .complexity {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #616161; /* Middelgrijs voor complexiteit */
+}
+.endorsement-card .feedback-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #424242; /* Donkergrijs voor feedback tekst */
+  margin: 15px 0;
+  flex-grow: 1;
+}
+.endorsement-card .customer-info {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #616161; /* Middelgrijs voor klantinfo */
+  margin-top: auto;
+}
+
+/* Content wrapper voor de 'gevouwen' functionaliteit voor endorsement cards */
+.endorsement-card .content-wrapper {
+  max-height: 100px; /* Initiële gevouwen hoogte */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.5s ease-out; /* Vloeiende overgang */
+  width: 100%; /* Zorg ervoor dat het de volledige breedte inneemt */
+}
+
+/* Fading effect aan de onderkant van de gevouwen kaart voor endorsement cards */
+.endorsement-card .content-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Hoogte van het fade-effect */
+  background: linear-gradient(
+    to top,
+    #faf5f5,
+    rgba(250, 245, 245, 0)
+  ); /* Fade van kaartachtergrond naar transparant */
+  pointer-events: none; /* Zorgt ervoor dat klikken erdoorheen gaan */
+}
+
+/* Stijl voor de 'uitgevouwen' staat voor endorsement cards */
+.endorsement-card.unfolded .content-wrapper {
+  max-height: 1000px; /* Groot genoeg om alle inhoud te tonen */
+}
+/* Verberg het fade-effect wanneer uitgevouwen voor endorsement cards */
+.endorsement-card.unfolded .content-wrapper::after {
+  display: none;
+}
+
+/* Call to Action secties */
+.cta-section {
+  padding: 80px 0;
+  text-align: center;
+  color: #e0e0e0;
+}
+.cta-section.bg-darker {
+  background-image: url("https://www.softwaredam.com/images/main-background.png"); /* Achtergrondafbeelding */
+  background-size: cover;
+  background-position: center;
+}
+/* Overrulende .btn stijlen voor CTA-sectie om consistentie met aangepaste knoppen te garanderen */
+.cta-section .custom-btn {
+  font-size: 1.3rem; /* Iets groter voor CTA */
+  padding: 1.2rem 2.5rem; /* Grotere padding voor CTA */
+}
+.cta-section .custom-btn.primary-btn {
+  box-shadow: 0 10px 20px rgba(255, 74, 0, 0.5); /* Sterkere schaduw */
+}
+.cta-section .custom-btn.primary-btn:hover {
+  transform: translateY(-5px) scale(1.05); /* Meer uitgesproken hover */
+  box-shadow: 0 15px 30px rgba(255, 74, 0, 0.7);
+}
+.cta-section .custom-btn.outline-btn-custom {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.cta-section .custom-btn.outline-btn-custom:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(255, 74, 0, 0.5);
+}
+
+/* Contact sectie */
+.contact-section {
+  background-image: url("https://www.softwaredam.com/images/softwaredam-orangutan.png");
+  background-size: cover;
+  background-position: left;
+  position: relative;
+  padding: 100px 0;
+  color: white;
+  text-align: center;
+}
+.contact-content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  /* Materialize 'l' breakpoint (grotere tablets/kleine desktops) */
+  .map-container {
+    padding-bottom: 40% !important;
+  }
+}
+@media (max-width: 768px) {
+  /* Materialize 'm' breakpoint (tablets) */
+  .map-container {
+    padding-bottom: 60% !important;
+  }
+}
+@media (max-width: 600px) {
+  /* Materialize 's' breakpoint (mobiel) */
+  .map-container {
+    padding-bottom: 50% !important;
+  }
+}
+
+/* Style for responsive iframe container */
+.map-container {
+  position: relative;
+  padding-bottom: 20%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  /* border-radius: 8px; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0; /* Verwijder standaard iframe-rand */
+}
+
+.social-icon-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  background-color: rgba(255, 74, 0, 0.15);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* margin: 0 10px; */ /* Verplaatst naar de kolom */
+}
+.social-icon-btn:hover {
+  background-color: #ff4a00;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 74, 0, 0.4);
+}
+.social-icon-btn i.material-icons {
+  color: #ff4a00;
+  font-size: 28px;
+  transition: color 0.3s ease-in-out;
+}
+.social-icon-btn:hover i.material-icons {
+  color: #05040a;
+}
+
+/* Voettekst sectie */
+.page-footer {
+  background-image: url("https://www.softwaredam.com/images/main-background.png"); /* Achtergrondafbeelding */
+  background-size: cover;
+  background-position: center;
+  padding-top: 30px;
+  color: #888;
+  text-align: center;
+}
+.page-footer .footer-copyright {
+  padding: 15px 0;
+}
+.page-footer a {
+  transition: color 0.3s ease;
+}
+.page-footer a:hover {
   color: #ff4a00;
 }
 
-.softwaredam-pink {
-  color: #faf5f5;
+/* Hulpklassen voor Materialize grid */
+.row .col {
+  padding: 0 15px; /* Standaard Materialize kolompadding */
 }
 
-.softwaredam-light-blue {
-  background-color: #e6eff1;
-}
-
-.new-part {
-  margin-top: 8em;
-  margin-bottom: 2em;
-}
-
-.primary-logo-text {
-  padding-top: 0.35em;
-}
-
-header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  transition: all 0.3s ease;
-}
-
-.logo {
-  width: 15em;
-  padding-right: 2em;
-  padding-left: 5em;
-  padding-right: 1em;
-  padding-top: 7em;
-  transition: all 0.3s ease;
-}
-
-.logo-text {
-  font-size: 0em;
-  margin-top: 2em;
-  padding-left: 0px;
-  margin-left: 0em;
-}
-
-.bolder {
-  font-weight: bolder;
-}
-
-.container {
-  height: 100vh;
-  scroll-behavior: smooth;
-  width: 90%;
-}
-
-#last-slide {
-  height: 100vh;
-  width: 100vw;
-  background-image: url("images/softwaredam-orangutan.png");
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
-}
-
-#slide1 {
-  background-image: url("images/main-background.png");
-}
-
-.cookies {
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  background-color: black;
-  opacity: 0.5;
-  border-radius: 5px;
-  justify-content: center;
-  justify-self: center;
-  padding-right: 1em;
-  padding-left: 1em;
-  align-items: center;
-  left: 30%;
-}
-
-.cookies p {
-  font-size: 24px;
-}
-
-.cookies button {
-  text-decoration: none;
-  background: #ebd8d9;
-  color: black;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 0;
-  font-size: 14px;
-}
-
-@keyframes fadeInCookies {
-  from {
-    opacity: 0;
+/* Pas Materialize container- en kolompadding aan voor kleine schermen voor alle secties */
+@media (max-width: 600px) {
+  .container {
+    padding: 0 10px !important; /* Aangepast naar 10px voor betere balans */
   }
-
-  to {
-    opacity: 1;
+  .row .col {
+    padding: 0 5px !important; /* Aangepast naar 5px voor betere balans */
   }
 }
 
-@keyframes fadeOutCookies {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-.fade-in {
-  animation: fadeInCookies 0.5s ease-in-out;
-}
-
-.fade-out {
-  animation: fadeOutCookies 0.5s ease-in-out;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.footer {
-  font-size: 14px;
-}
-
-.contact {
-  padding-bottom: 2em;
-  bottom: 0;
-  width: 100%;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  justify-self: auto;
-  align-items: center;
-  opacity: 0.5;
-}
-
-.contact-button {
-  margin-left: 5px;
-  display: inline-block;
-  opacity: 0.8;
-  padding: 10px 20px;
-  padding-bottom: 0px 0px;
-  font-size: 16px;
-  color: white;
-  border-radius: 40px;
-  background: linear-gradient(45deg, #ff6600, #ff4a00, #ff2200);
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.call-button {
-  background: linear-gradient(45deg, #ff6600, #ff4a00, #ff2200);
-}
-
-.contact-button:hover {
-  background: linear-gradient(45deg, #ff2200, #ff4a00, #ff6600);
-}
-
-.media-icon {
-  width: 40px;
-  padding: 0px;
-  margin: 5px;
-}
-
-.pictogram {
-  background: #f6ecec;
-  margin-top: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
-}
-
-.pictogram h6 {
-  font-weight: 500;
-  letter-spacing: normal;
-}
-
-.pictogram p {
-  font-size: 0.7em;
-}
-
-.image-top {
-  padding-top: 0.5em;
-  height: 70px;
-}
-
-.profile-pic {
-  width: 9em;
-  padding: 0px;
-  margin: 0px;
-  cursor: pointer;
-}
-
-.profile-text {
-  background-color: #e6eff1;
-}
-
-.tabs .tab {
-  height: auto;
-}
-
-.tabs .indicator {
-  background-color: transparent;
-}
-
-.tab {
-  display: grid;
-}
-
-.active a {
-  width: 2em;
-}
-
-.tabs .tab a:focus,
-.tabs .tab a:focus.active {
-  background-color: transparent;
-}
-
-.tabs {
-  height: auto;
-  background-color: transparent;
+/* Specifieke styling voor de afbeelding in de carrièresectie */
+.cta-section #careers .card-panel {
+  box-shadow: none !important; /* Verwijder de schaduw */
+  padding: 0 !important; /* Verwijder de padding */
+  margin: 0 !important; /* Verwijder de marge en centreer horizontaal */
 }
