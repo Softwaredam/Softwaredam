@@ -751,7 +751,7 @@ nav ul a:hover {
 }
 
 .social-icon-btn {
-  display: inline-flex;
+  display: inline-flex !important;
   justify-content: center;
   align-items: center;
   width: 56px;
