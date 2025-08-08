@@ -40,6 +40,8 @@
     />
     <meta property="og:url" content="https://softwaredam.com" />
     <!-- Meta tags end -->
+    <link rel="stylesheet" href="styles.css" />
+
     <title>Softwaredam - Build. Migrate. Transform.</title>
     <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
     <link rel="icon" sizes="192x192" href="images/logo.svg" />
@@ -59,33 +61,12 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- Header sectie -->
     <header>
+      <super-header></super-header>
       <!-- Toegevoegde navbar-fixed wrapper -->
-      <div class="navbar-fixed">
-        <nav class="nav-dark-bg" role="navigation">
-          <div class="nav-wrapper container">
-            <!-- Logo container links gepositioneerd -->
-            <a id="logo-container" href="#" class="brand-logo left">
-              <img
-                src="https://www.softwaredam.com/images/logo.svg"
-                alt="SOFTWAREDAM Logo"
-              />
-              <span class="white-text heavy-text-logo">SOFTWAREDAM</span>
-            </a>
-            <!-- Navigatie links voor grote schermen -->
-            <ul class="right hide-on-med-and-down">
-              <li><a href="#services" class="white-text">Diensten</a></li>
-              <li><a href="#about-us" class="white-text">Over Ons</a></li>
-              <li><a href="#careers" class="white-text">Carrières</a></li>
-              <li><a href="#contact" class="white-text">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
     </header>
 
     <!-- Hero sectie -->
@@ -125,25 +106,25 @@
           <!-- Rechterkant: Visualisatie van service-iconen & tekst -->
           <div class="col s12 l6 hide-on-med-and-down">
             <div class="hero-visual-items">
-              <a href="#services" class="hero-visual-link">
+              <a href="pages/migrations.html" class="hero-visual-link">
                 <div class="hero-visual-item">
                   <i class="material-icons">swap_horiz</i>
                   <h3>Migraties</h3>
                 </div>
               </a>
-              <a href="#services" class="hero-visual-link">
+              <a href="pages/trainingen.html" class="hero-visual-link">
                 <div class="hero-visual-item">
                   <i class="material-icons">school</i>
                   <h3>Trainingen</h3>
                 </div>
               </a>
-              <a href="#services" class="hero-visual-link">
+              <a href="pages/cloud.html" class="hero-visual-link">
                 <div class="hero-visual-item">
                   <i class="material-icons">cloud_queue</i>
                   <h3>Cloud Platforms</h3>
                 </div>
               </a>
-              <a href="#services" class="hero-visual-link">
+              <a href="pages/devops.html" class="hero-visual-link">
                 <div class="hero-visual-item">
                   <i class="material-icons">build</i>
                   <h3>DevOps Transformaties</h3>
@@ -332,59 +313,7 @@
 
     <!-- Voettekst sectie -->
     <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text heavy-text-logo">SOFTWAREDAM</h5>
-            <p class="grey-text text-lighten-4">
-              Bouwen, migreren en transformeren van digitale landschappen.
-            </p>
-          </div>
-          <div class="col l6 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li>
-                <a class="grey-text text-lighten-3" href="#services"
-                  >Diensten</a
-                >
-              </li>
-              <li>
-                <a class="grey-text text-lighten-3" href="#about-us"
-                  >Over Ons</a
-                >
-              </li>
-              <li>
-                <a class="grey-text text-lighten-3" href="#careers"
-                  >Carrières</a
-                >
-              </li>
-              <li>
-                <a class="grey-text text-lighten-3" href="#contact">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container center-align">
-          &copy; 2025 Softwaredam. Alle rechten voorbehouden.
-          <a class="grey-text text-lighten-4 right" href="#!">Privacybeleid</a>
-          <a class="grey-text text-lighten-4 left" href="#!"
-            >Algemene voorwaarden</a
-          >
-        </div>
-      </div>
-      <div class="map-container">
-        <iframe
-          title="Map with location of Softwaredam"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2654.350258715766!2d4.511808498901193!3d52.04642467604739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5c923cc1eb31b%3A0xb3d5728fa1a57c2!2sSoftwaredam!5e0!3m2!1snl!2snl!4v1752752046422!5m2!1snl!2snl/place"
-          height="30"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
+      <super-footer></super-footer>
     </footer>
 
     <!-- Floating Action Button (FAB) for Mobile and Tablet -->
@@ -623,7 +552,7 @@
               name: "Stephan Duivelshof",
               role: "Junior DevOps Developer",
               description:
-                "Stephan is een derdejaarsstudent Innovative Development met een passie voor het identificeren en oplossen van vraagstukken met behulp van technologie. Als parttime DevOps Developer vertaald hij deze innovatieve aanpak naar de praktijk. Met deze aanpak zoekt hij voor de juiste oplossing voor jou bedrijf!",
+                "Stephan is een derdejaarsstudent Innovative Development met een passie voor het identificeren en oplossen van vraagstukken met behulp van technologie. Als parttime DevOps Engineer vertaalt hij deze innovatieve aanpak naar de praktijk. Met deze aanpak zoekt hij voor de juiste passende oplossing voor jou bedrijf!",
               social: {
                 email: "mailto:stephan.duivelshof@softwaredam.com",
                 linkedin: "https://www.linkedin.com/in/stephan-duivelshof",
@@ -636,7 +565,7 @@
               name: "Word dit jou plek?",
               role: "DevOps Engineer",
               description:
-                "Wil jij jou volgende stap zetten in jou cariere. Kom dan werken bij ons! Heb je interesse stuur dan een mail via de onderstaande contact mogelijkheden.",
+                "Wil jij jouw volgende stap zetten in jouw cariere. Kom dan werken bij ons! Heb je interesse contact ons dan via een van de onderstaande contact mogelijkheden.",
               social: {
                 email:
                   "mailto:yosuf@softwaredam.com?subject=Sollicitatie%20DevOps%20Engineer&body=Hoi Softwaredam,%0A%0ANaar aanleiding van de vacature op jullie website, wil ik graag solliciteren naar de functie van DevOps Engineer.%0A%0AIn de bijlage vind je mijn CV. Mijn motivatie voor deze functie licht ik hieronder graag kort toe:%0A%0A[Hier kan je je motivatie schrijven]%0A%0AIk kijk uit naar je reactie.%0A%0AMet vriendelijke groet,%0A%0A[Je naam]%0A[Je telefoonnummer]%0A[Link naar je LinkedIn, GitHub, GitLab, ... profiel (optioneel)]",
@@ -920,5 +849,6 @@
         initializeFoldableCards(".team-member-card");
       });
     </script>
+    <script src="./headerfooter.js"></script>
   </body>
 </html>
